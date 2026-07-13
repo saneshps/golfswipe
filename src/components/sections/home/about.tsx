@@ -17,7 +17,7 @@ export default function About() {
         className="pointer-events-none absolute left-1/2 top-0 h-48 w-[min(100%,36rem)] -translate-x-1/2 rounded-full bg-emerald-600/10 blur-[80px]"
       />
 
-      <div className="container relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <div className="md:w-[90%] relative mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16 xl:gap-20">
           {/* Left — content */}
           <div className="relative z-10 w-full text-center lg:max-w-xl lg:flex-1 lg:text-left xl:max-w-2xl">

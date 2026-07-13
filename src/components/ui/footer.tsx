@@ -137,7 +137,7 @@ export default function Footer() {
           aria-hidden="true"
         />
 
-        <div className="container relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+        <div className="md:w-[90%] relative mx-auto px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
           <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-3 md:gap-8 lg:gap-12">
             {/* Column 1 — Social media */}
             <div className="flex flex-col items-center gap-5 md:items-start">
@@ -208,7 +208,7 @@ export default function Footer() {
         </div>
 
         <div className="relative border-t border-emerald-500/10 bg-black/20">
-          <div className="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-center sm:flex-row sm:px-6 sm:text-left lg:px-8">
+          <div className="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-5 text-center sm:flex-row sm:px-6 sm:text-left lg:px-8">
             <p className="text-xs text-zinc-500 sm:text-sm">
               &copy; {currentYear} Golf Swipe. All rights reserved.
             </p>
