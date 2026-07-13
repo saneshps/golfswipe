@@ -50,7 +50,7 @@ export default function Header() {
 
           {/* Desktop navigation */}
           <nav
-            className="hidden flex-1 items-center justify-end xl:flex"
+            className="hidden flex-1 items-center justify-end gap-3 xl:flex"
             aria-label="Main navigation"
           >
             <ul className="flex flex-wrap items-center justify-end gap-x-1 gap-y-1">
@@ -65,6 +65,12 @@ export default function Header() {
                 </li>
               ))}
             </ul>
+            <Link
+              href="/"
+              className="shrink-0 rounded-md bg-[#03372b] px-4 py-2 text-[15px] font-medium tracking-wide text-white shadow-[0_0_16px_rgba(156,163,175,0.55),0_0_32px_rgba(156,163,175,0.35)] ring-2 ring-[#9ca3af]/50 transition-all duration-300 hover:bg-[#024a3a] hover:shadow-[0_0_24px_rgba(156,163,175,0.7),0_0_48px_rgba(156,163,175,0.45)] hover:ring-[#9ca3af]/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9ca3af] focus-visible:ring-offset-2"
+            >
+              Download Now
+            </Link>
           </nav>
 
           {/* Hamburger button — mobile & tablet only */}
@@ -168,6 +174,13 @@ export default function Header() {
         </ul>
 
         <div className="shrink-0 border-t border-white/15 px-4 py-4 sm:px-6">
+          <Link
+            href="/"
+            onClick={closeMenu}
+            className="mb-3 flex w-full items-center justify-center rounded-lg bg-white px-4 py-3 text-sm font-semibold tracking-wide text-[#03372b] shadow-[0_0_18px_rgba(156,163,175,0.45),0_0_36px_rgba(156,163,175,0.35)] ring-2 ring-[#9ca3af]/60 transition-all duration-300 hover:bg-white hover:shadow-[0_0_28px_rgba(156,163,175,0.6),0_0_52px_rgba(156,163,175,0.5)] hover:ring-[#9ca3af]/80"
+          >
+            Download Now
+          </Link>
           <p className="text-center text-xs text-white/70">
             Your all-in-one golf community
           </p>
