@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -60,112 +63,171 @@ const socialLinks = [
 const socialButtonClass =
   "flex h-11 w-11 items-center justify-center rounded-full border border-emerald-500/20 bg-emerald-950/40 text-emerald-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/50 hover:bg-emerald-600 hover:text-white hover:shadow-lg hover:shadow-emerald-900/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950";
 
+function BackToTopButton() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 320);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={scrollToTop}
+      aria-label="Back to top"
+      className={`group fixed bottom-6 left-4 z-40 flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-emerald-400/30 bg-gradient-to-br from-emerald-600 via-emerald-700 to-[#03372b] text-white shadow-[0_8px_30px_rgba(5,46,22,0.45)] transition-all duration-500 ease-out sm:bottom-8 sm:left-6 sm:h-14 sm:w-14 ${
+        visible
+          ? "pointer-events-auto translate-y-0 scale-100 opacity-100"
+          : "pointer-events-none translate-y-4 scale-90 opacity-0"
+      } hover:-translate-y-1 hover:border-emerald-300/60 hover:shadow-[0_12px_36px_rgba(16,185,129,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950`}
+    >
+      <span
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.25),transparent_55%)]"
+        aria-hidden="true"
+      />
+      <span
+        className="pointer-events-none absolute -inset-px rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(140,193,41,0.35), transparent 50%, rgba(16,185,129,0.25))",
+        }}
+        aria-hidden="true"
+      />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.25"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="relative h-5 w-5 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 sm:h-6 sm:w-6"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5" />
+        <path d="m5 12 7-7 7 7" />
+      </svg>
+    </button>
+  );
+}
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-auto w-full overflow-hidden border-t border-emerald-500/10 bg-zinc-950 text-zinc-300">
-      <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-950/90 via-zinc-950 to-zinc-950"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-emerald-600/10 blur-3xl"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl"
-        aria-hidden="true"
-      />
+    <>
+      <footer className="relative mt-auto w-full overflow-hidden border-t border-emerald-500/10 bg-zinc-950 text-zinc-300">
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-950/90 via-zinc-950 to-zinc-950"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-emerald-600/10 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl"
+          aria-hidden="true"
+        />
 
-      <div className="container relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-3 md:gap-8 lg:gap-12">
-          {/* Column 1 — Social media */}
-          <div className="flex flex-col items-center gap-5 md:items-start">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400/90">
-              Follow Us
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className={socialButtonClass}
-                >
-                  {social.icon}
-                </Link>
-              ))}
-            </div>
-            <p className="max-w-xs text-center text-sm leading-relaxed text-zinc-400 md:text-left">
-              Join the global golf community. Stay connected for tips, events, and gear drops.
-            </p>
-          </div>
-
-          {/* Column 2 — Logo */}
-          <div className="flex flex-col items-center gap-4 text-center">
-            <Link
-              href="/"
-              className="group inline-flex transition-transform duration-300 hover:scale-[1.02]"
-            >
-              <Image
-                src="/asset/img/golf-swipe-logo.png"
-                alt="Golf Swipe"
-                width={180}
-                height={42}
-                className="h-14 w-auto brightness-0 invert transition-opacity duration-300 group-hover:opacity-90 sm:h-16 lg:h-[4.5rem]"
-              />
-            </Link>
-            <p className="max-w-[16rem] text-sm leading-relaxed text-zinc-400">
-              Your all-in-one golf community in your pocket.
-            </p>
-          </div>
-
-          {/* Column 3 — Quick links */}
-          <div className="flex flex-col items-center gap-5 md:items-end">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400/90">
-              Quick Links
-            </p>
-            <nav aria-label="Footer navigation">
-              <ul className="flex flex-col items-center gap-2.5 md:items-end">
-                {quickLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="group inline-flex items-center gap-2 text-sm text-zinc-300 transition-colors duration-200 hover:text-emerald-400"
-                    >
-                      <span
-                        className="h-1 w-1 shrink-0 rounded-full bg-emerald-500/60 transition-all duration-200 group-hover:w-2 group-hover:bg-emerald-400"
-                        aria-hidden="true"
-                      />
-                      {link.label}
-                    </Link>
-                  </li>
+        <div className="container relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+          <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-3 md:gap-8 lg:gap-12">
+            {/* Column 1 — Social media */}
+            <div className="flex flex-col items-center gap-5 md:items-start">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400/90">
+                Follow Us
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
+                {socialLinks.map((social) => (
+                  <Link
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    className={socialButtonClass}
+                  >
+                    {social.icon}
+                  </Link>
                 ))}
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
+              </div>
+              <p className="max-w-xs text-center text-sm leading-relaxed text-zinc-400 md:text-left">
+                Join the global golf community. Stay connected for tips, events, and gear drops.
+              </p>
+            </div>
 
-      <div className="relative border-t border-emerald-500/10 bg-black/20">
-        <div className="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-center sm:flex-row sm:px-6 sm:text-left lg:px-8">
-          <p className="text-xs text-zinc-500 sm:text-sm">
-            &copy; {currentYear} Golf Swipe. All rights reserved.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-zinc-500 sm:text-sm">
-            <Link href="#" className="transition-colors hover:text-emerald-400">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="transition-colors hover:text-emerald-400">
-              Terms of Service
-            </Link>
-            <Link href="#" className="transition-colors hover:text-emerald-400">
-              Contact
-            </Link>
+            {/* Column 2 — Logo */}
+            <div className="flex flex-col items-center gap-4 text-center">
+              <Link
+                href="/"
+                className="group inline-flex transition-transform duration-300 hover:scale-[1.02]"
+              >
+                <Image
+                  src="/asset/img/golf-swipe-logo.png"
+                  alt="Golf Swipe"
+                  width={180}
+                  height={42}
+                  className="h-14 w-auto brightness-0 invert transition-opacity duration-300 group-hover:opacity-90 sm:h-16 lg:h-[4.5rem]"
+                />
+              </Link>
+              <p className="max-w-[16rem] text-sm leading-relaxed text-zinc-400">
+                Your all-in-one golf community in your pocket.
+              </p>
+            </div>
+
+            {/* Column 3 — Quick links */}
+            <div className="flex flex-col items-center gap-5 md:items-end">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400/90">
+                Quick Links
+              </p>
+              <nav aria-label="Footer navigation">
+                <ul className="flex flex-col items-center gap-2.5 md:items-end">
+                  {quickLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="group inline-flex items-center gap-2 text-sm text-zinc-300 transition-colors duration-200 hover:text-emerald-400"
+                      >
+                        <span
+                          className="h-1 w-1 shrink-0 rounded-full bg-emerald-500/60 transition-all duration-200 group-hover:w-2 group-hover:bg-emerald-400"
+                          aria-hidden="true"
+                        />
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+
+        <div className="relative border-t border-emerald-500/10 bg-black/20">
+          <div className="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-center sm:flex-row sm:px-6 sm:text-left lg:px-8">
+            <p className="text-xs text-zinc-500 sm:text-sm">
+              &copy; {currentYear} Golf Swipe. All rights reserved.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-zinc-500 sm:text-sm">
+              <Link href="#" className="transition-colors hover:text-emerald-400">
+                Privacy Policy
+              </Link>
+              <Link href="#" className="transition-colors hover:text-emerald-400">
+                Terms of Service
+              </Link>
+              <Link href="#" className="transition-colors hover:text-emerald-400">
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <BackToTopButton />
+    </>
   );
 }
