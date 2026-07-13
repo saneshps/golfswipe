@@ -85,7 +85,7 @@ const features = [
 
 export default function Whychoose() {
   return (
-    <section className="relative w-full overflow-hidden bg-white">
+    <section className="relative w-full overflow-hidden bg-light-gray">
       {/* Soft green atmosphere */}
       <div
         aria-hidden="true"

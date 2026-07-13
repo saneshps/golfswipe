@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-emerald-900/10 bg-white/95 shadow-sm backdrop-blur-md dark:border-emerald-500/10 dark:bg-zinc-950/95">
+      <header className="sticky top-0 z-50 w-full border-b border-emerald-900/10 bg-white shadow-sm backdrop-blur-md dark:border-emerald-500/10 dark:bg-zinc-950/95">
         <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:h-[6rem] sm:px-6 lg:px-8">
           <Link
             href="/"
