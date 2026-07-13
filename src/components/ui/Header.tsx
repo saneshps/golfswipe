@@ -58,7 +58,7 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="rounded-md px-2.5 py-1.5 text-[15px] tracking-wide text-zinc-700 transition-colors hover:bg-emerald-50 hover:text-emerald-800 dark:text-zinc-300 dark:hover:bg-emerald-950/50 dark:hover:text-emerald-400"
+                    className="rounded-md px-2.5 py-1.5 text-[15px] tracking-wide text-black transition-colors hover:bg-[#03372b] hover:text-white dark:hover:bg-[#03372b] dark:hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -70,7 +70,7 @@ export default function Header() {
           {/* Hamburger button — mobile & tablet only */}
           <button
             type="button"
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-emerald-900/10 bg-emerald-50/50 text-emerald-900 transition-colors hover:bg-emerald-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 xl:hidden dark:border-emerald-500/20 dark:bg-emerald-950/30 dark:text-emerald-400 dark:hover:bg-emerald-950/60 dark:focus-visible:ring-emerald-500"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#03372b] bg-[#03372b] text-white transition-colors hover:bg-[#03372b] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#03372b] focus-visible:ring-offset-2 xl:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -110,13 +110,13 @@ export default function Header() {
       {/* Mobile menu panel */}
       <nav
         id="mobile-nav"
-        className={`fixed right-0 top-0 z-[70] flex h-dvh w-[min(100vw,20rem)] flex-col bg-white shadow-2xl transition-transform duration-300 ease-in-out xl:hidden dark:bg-zinc-950 ${
+        className={`fixed right-0 top-0 z-[70] flex h-dvh w-[min(100vw,20rem)] flex-col bg-[#03372b] text-white shadow-2xl transition-transform duration-300 ease-in-out xl:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
       >
-        <div className="flex h-16 shrink-0 items-center justify-between border-b border-emerald-900/10 px-4 dark:border-emerald-500/10 sm:h-[4.5rem] sm:px-6">
+        <div className="flex h-16 shrink-0 items-center justify-between border-b border-white/15 px-4 sm:h-[4.5rem] sm:px-6">
           <Link href="/" onClick={closeMenu}>
             <Image
               src="/asset/img/golf-swipe-logo.png"
@@ -128,7 +128,7 @@ export default function Header() {
           </Link>
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-emerald-900/10 bg-emerald-50/50 text-emerald-900 transition-colors hover:bg-emerald-100 dark:border-emerald-500/20 dark:bg-emerald-950/30 dark:text-emerald-400 dark:hover:bg-emerald-950/60"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
             aria-label="Close menu"
             onClick={closeMenu}
           >
@@ -153,22 +153,22 @@ export default function Header() {
           {navLinks.map((link) => (
             <li
               key={link.href}
-              className="border-b border-zinc-100 last:border-b-0 dark:border-zinc-800"
+              className="border-b border-white/10 last:border-b-0"
             >
               <Link
                 href={link.href}
-                className="flex items-center rounded-lg px-3 py-3.5 text-sm font-medium text-zinc-800 transition-colors hover:bg-emerald-50 hover:text-emerald-800 active:bg-emerald-100 dark:text-zinc-200 dark:hover:bg-emerald-950/40 dark:hover:text-emerald-400"
+                className="flex items-center rounded-lg px-3 py-3.5 text-sm font-medium text-white transition-colors hover:bg-white/10 active:bg-white/15"
                 onClick={closeMenu}
               >
-                <span className="mr-3 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 dark:bg-emerald-500" />
+                <span className="mr-3 h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
 
-        <div className="shrink-0 border-t border-emerald-900/10 bg-emerald-50/50 px-4 py-4 dark:border-emerald-500/10 dark:bg-emerald-950/20 sm:px-6">
-          <p className="text-center text-xs text-zinc-500 dark:text-zinc-400">
+        <div className="shrink-0 border-t border-white/15 px-4 py-4 sm:px-6">
+          <p className="text-center text-xs text-white/70">
             Your all-in-one golf community
           </p>
         </div>

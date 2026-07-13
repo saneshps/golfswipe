@@ -32,7 +32,7 @@ const storeButtonClass =
 
 export default function Hero() {
   return (
-    <section className="w-full overflow-hidden bg-white">
+    <section className="w-full overflow-hidden bg-light-gray">
       <div className="container mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:px-8 lg:py-20 xl:py-24">
         {/* Left — content */}
         <div className="w-full max-w-xl text-center lg:max-w-lg lg:flex-1 lg:text-left xl:max-w-xl">
