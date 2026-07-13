@@ -1,4 +1,5 @@
 import Header from "@/components/ui/header";
+import Footer from "@/components/ui/footer";
 import Hero from "@/components/sections/home/hero";
 import About from "@/components/sections/home/about";
 
@@ -10,6 +11,7 @@ export default function Home() {
         <Hero />
         <About />
       </main>
+      <Footer />
     </div>
   );
 }
