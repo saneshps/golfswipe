@@ -137,7 +137,7 @@ export default function Footer() {
           aria-hidden="true"
         />
 
-        <div className="md:w-[90%] relative mx-auto px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+        <div className="md:w-[90%] lg:w-[90%] xl:w-[90%] 2xl:w-[85%] relative mx-auto px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
           <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-3 md:gap-8 lg:gap-12">
             {/* Column 1 — Social media */}
             <div className="flex flex-col items-center gap-5 md:items-start">

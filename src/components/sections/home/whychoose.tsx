@@ -100,7 +100,7 @@ export default function Whychoose() {
         className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-teal-300/10 blur-[110px]"
       />
 
-      <div className="md:w-[90%] relative mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <div className="md:w-[90%] lg:w-[90%] xl:w-[90%] 2xl:w-[85%] relative mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
           <span className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-700 sm:mb-5 sm:text-sm">

@@ -17,7 +17,7 @@ export default function About() {
         className="pointer-events-none absolute left-1/2 top-0 h-48 w-[min(100%,36rem)] -translate-x-1/2 rounded-full bg-emerald-600/10 blur-[80px]"
       />
 
-      <div className="md:w-[90%] relative mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <div className="md:w-[90%] lg:w-[90%] xl:w-[90%] 2xl:w-[85%] relative mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16 xl:gap-20">
           {/* Left — content */}
           <div className="relative z-10 w-full text-center lg:max-w-xl lg:flex-1 lg:text-left xl:max-w-2xl">
@@ -43,8 +43,8 @@ export default function About() {
           </div>
 
           {/* Right — image with glow */}
-          <div className="relative z-10 flex w-full justify-center lg:w-auto lg:flex-1 lg:justify-end">
-            <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-none">
+          <div className="relative z-10 flex w-full justify-center lg:flex-1 lg:justify-end">
+            <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl">
               {/* Image glow halo */}
               <div
                 aria-hidden="true"
@@ -55,13 +55,13 @@ export default function About() {
                 className="absolute -inset-2 rounded-[2.5rem] border sm:-inset-3"
               />
 
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border ring-1 sm:aspect-[5/6] lg:aspect-[5/5]">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border ring-1 sm:aspect-[5/6] lg:aspect-square">
                 <Image
                   src="/asset/img/about-golf.webp"
                   alt="Golfer on the course at golden hour"
                   fill
                   className="object-cover object-center"
-                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  sizes="(max-width: 1024px) 90vw, 36rem"
                 />
 
                 {/* Soft vignette overlay */}

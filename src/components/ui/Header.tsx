@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-emerald-900/10 bg-white shadow-sm backdrop-blur-md dark:border-emerald-500/10 dark:bg-zinc-950/95">
-        <div className="md:w-[90%] mx-auto flex h-16 items-center justify-between gap-4 px-4 sm:h-[6rem] sm:px-6 lg:px-8">
+        <div className="md:w-[90%] lg:w-[90%] xl:w-[90%] 2xl:w-[85%] mx-auto flex h-16 items-center justify-between gap-4 px-4 sm:h-[6rem] sm:px-6 lg:px-8">
           <Link
             href="/"
             className="shrink-0 transition-opacity hover:opacity-80"
