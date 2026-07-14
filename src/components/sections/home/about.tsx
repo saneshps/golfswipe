@@ -22,7 +22,7 @@ export default function About() {
           {/* Left — content */}
           <div className="relative z-10 w-full text-center lg:max-w-xl lg:flex-1 lg:text-left xl:max-w-2xl">
             <span className="mb-4 inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.25)] sm:mb-6 sm:text-sm">
-              About Golf Swipe
+              About GolfSwipe
             </span>
 
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">

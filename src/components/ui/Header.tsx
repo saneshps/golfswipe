@@ -6,10 +6,11 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Marketplace", href: "/marketplace" },
-  { label: "Meet-Up Map & Calendar", href: "/meet-up-map-calendar" },
-  { label: "Golf Travel Hub", href: "/golf-travel-hub" },
-  { label: "GPS Course Maps & Shot Planner", href: "/gps-course-maps-shot-planner" },
+  // { label: "Marketplace", href: "/marketplace" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Features", href: "/features" },
+  { label: "Contact Us", href: "/contact-us" },
+  // { label: "GPS Course Maps & Shot Planner", href: "/gps-course-maps-shot-planner" },
   // { label: "Score & Performance Tracker", href: "/score-performance-tracker" },
   // { label: "Bi-Weekly Rules Quiz", href: "/bi-weekly-rules-quiz" },
   // { label: "The Clubhouse Forum", href: "/clubhouse-forum" },

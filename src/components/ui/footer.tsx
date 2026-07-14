@@ -210,7 +210,7 @@ export default function Footer() {
         <div className="relative border-t border-emerald-500/10 bg-black/20">
           <div className="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-5 text-center sm:flex-row sm:px-6 sm:text-left lg:px-8">
             <p className="text-xs text-zinc-500 sm:text-sm">
-              &copy; {currentYear} Golf Swipe. All rights reserved.
+              &copy; {currentYear} GolfSwipe. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-zinc-500 sm:text-sm">
               <Link href="#" className="transition-colors hover:text-emerald-400">

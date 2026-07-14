@@ -37,7 +37,7 @@ export default function Hero() {
         {/* Left — content */}
         <div className="w-full max-w-xl text-center lg:max-w-lg lg:flex-1 lg:text-left xl:max-w-xl">
           <span className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-700 sm:mb-6 sm:text-sm">
-            Golf Swipe
+            GolfSwipe
           </span>
 
           <h1 className="text-3xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl xl:text-[3.25rem] xl:leading-[1.1]">
