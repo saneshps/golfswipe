@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navLinks = [
@@ -11,7 +12,13 @@ const navLinks = [
   { label: "Contact Us", href: "/contact-us" },
 ];
 
+function isActivePath(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export default function Header() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -75,20 +82,28 @@ export default function Header() {
             aria-label="Main navigation"
           >
             <ul className="flex flex-wrap items-center justify-end gap-x-0.5 gap-y-1">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`rounded-md tracking-wide text-black transition-[padding,font-size,background-color,color] duration-300 hover:bg-[#03372b] hover:text-white ${
-                      scrolled
-                        ? "px-2 py-1 text-sm"
-                        : "px-2.5 py-1.5 text-[15px]"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map((link) => {
+                const active = isActivePath(pathname, link.href);
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      aria-current={active ? "page" : undefined}
+                      className={`rounded-md tracking-wide transition-[padding,font-size,background-color,color] duration-300 hover:bg-[#03372b] hover:text-white ${
+                        active
+                          ? "bg-[#03372b] font-medium text-white"
+                          : "text-black"
+                      } ${
+                        scrolled
+                          ? "px-2 py-1 text-sm"
+                          : "px-2.5 py-1.5 text-[15px]"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
             <Link
               href="/"
@@ -189,21 +204,31 @@ export default function Header() {
         </div>
 
         <ul className="flex-1 overflow-y-auto overscroll-contain px-3 py-4 sm:px-4">
-          {navLinks.map((link) => (
-            <li
-              key={link.href}
-              className="border-b border-white/10 last:border-b-0"
-            >
-              <Link
-                href={link.href}
-                className="flex items-center rounded-lg px-3 py-3.5 text-sm font-medium text-white transition-colors hover:bg-white/10 active:bg-white/15"
-                onClick={closeMenu}
+          {navLinks.map((link) => {
+            const active = isActivePath(pathname, link.href);
+            return (
+              <li
+                key={link.href}
+                className="border-b border-white/10 last:border-b-0"
               >
-                <span className="mr-3 h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
-                {link.label}
-              </Link>
-            </li>
-          ))}
+                <Link
+                  href={link.href}
+                  aria-current={active ? "page" : undefined}
+                  className={`flex items-center rounded-lg px-3 py-3.5 text-sm font-medium text-white transition-colors hover:bg-white/10 ${
+                    active ? "bg-white/15" : ""
+                  }`}
+                  onClick={closeMenu}
+                >
+                  <span
+                    className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${
+                      active ? "bg-[#8cc129]" : "bg-white"
+                    }`}
+                  />
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="shrink-0 border-t border-white/15 px-4 py-4 sm:px-6">
