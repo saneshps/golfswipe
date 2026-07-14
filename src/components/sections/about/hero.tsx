@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full px-4 sm:px-6 md:w-[90%] lg:w-[90%] lg:px-8 xl:w-[90%] 2xl:w-[85%]">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Marketplace
+            About Us
           </h1>
 
           <nav className="mt-3 sm:mt-4" aria-label="Breadcrumb">
@@ -39,7 +39,7 @@ export default function Hero() {
               </li>
               <li>
                 <span className="font-medium text-[#8cc129]" aria-current="page">
-                  Marketplace
+                  About Us
                 </span>
               </li>
             </ol>

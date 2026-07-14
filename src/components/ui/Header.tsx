@@ -6,8 +6,7 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  // { label: "Marketplace", href: "/marketplace" },
-  { label: "About Us", href: "/about-us" },
+  { label: "About Us", href: "/about" },
   { label: "Features", href: "/features" },
   { label: "Contact Us", href: "/contact-us" },
   // { label: "GPS Course Maps & Shot Planner", href: "/gps-course-maps-shot-planner" },
