@@ -63,8 +63,8 @@ export default function Header() {
               priority
               className={`w-auto transition-[height,width] duration-300 ease-out ${
                 scrolled
-                  ? "h-8 sm:h-9 lg:h-15"
-                  : "h-10 sm:h-12 lg:h-14 xl:h-22"
+                  ? "h-12 sm:h-9 lg:h-15"
+                  : "h-14 sm:h-12 lg:h-14 xl:h-22"
               }`}
             />
           </Link>
