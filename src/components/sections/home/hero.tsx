@@ -36,6 +36,15 @@ export default function Hero() {
       <div className="md:w-[90%] lg:w-[90%] xl:w-[90%] 2xl:w-[85%] mx-auto flex flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:px-8 lg:py-20 xl:py-24">
         {/* Left — content */}
         <div className="w-full max-w-xl text-center lg:max-w-lg lg:flex-1 lg:text-left xl:max-w-xl">
+          <div className="flex items-center justify-center">
+          <Image
+            src="/asset/img/golf-swipe-logo.png"
+            alt="GolfSwipe"
+            width={100}
+            height={100}
+            className="w-50 h-auto mb-6"
+          />
+          </div>
           <span className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-700 sm:mb-6 sm:text-sm">
             GolfSwipe
           </span>
