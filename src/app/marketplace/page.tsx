@@ -1,8 +1,8 @@
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import Hero from "@/components/sections/about/hero";
+import Hero from "@/components/sections/marketplace/hero";
 
-export default function AboutUsPage() {
+export default function marketplace() {
   return (
     <div className="flex min-h-full flex-1 flex-col bg-white font-sans dark:bg-black">
       <Header />
