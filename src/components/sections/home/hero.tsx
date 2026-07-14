@@ -28,7 +28,7 @@ function GooglePlayIcon({ className }: { className?: string }) {
 }
 
 const storeButtonClass =
-  "group flex w-full items-center gap-3 rounded-xl border border-zinc-200 bg-zinc-950 px-4 py-3 text-white shadow-md shadow-zinc-900/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-zinc-900 hover:shadow-lg hover:shadow-emerald-900/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto sm:min-w-[200px] sm:px-5 sm:py-3.5";
+  "group flex w-[60%] items-center gap-3 rounded-xl border border-zinc-200 bg-zinc-950 px-4 py-3 text-white shadow-md shadow-zinc-900/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-zinc-900 hover:shadow-lg hover:shadow-emerald-900/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto sm:min-w-[200px] sm:px-5 sm:py-3.5";
 
 export default function Hero() {
   return (
@@ -57,7 +57,7 @@ export default function Hero() {
             Swipe gear. Plan shots. Find your fourball. All in one borderless app.
           </h2>
 
-          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
+          <div className="mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
             <Link href="#" className={storeButtonClass} aria-label="Download on the App Store">
               <AppleIcon className="h-7 w-7 shrink-0 text-white transition-transform duration-300 group-hover:scale-110 sm:h-8 sm:w-8" />
               <span className="flex flex-col items-start leading-none">
