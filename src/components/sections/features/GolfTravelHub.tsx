@@ -29,79 +29,23 @@ export default function GolfTravelHub() {
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
-        <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
-          <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-16 xl:gap-20">
-            <div className="relative z-10 w-full lg:max-w-xl lg:flex-1 xl:max-w-2xl">
-              <span className="mb-4 inline-flex items-center rounded-full border border-[#03372b]/15 bg-[#03372b]/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-[#03372b] sm:mb-6 sm:text-sm">
-                Golf Travel Hub
+        <div className="relative mx-auto flex justify-center px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
+          <div className="relative z-10 mx-auto w-full max-w-3xl text-center">
+            <span className="mb-4 inline-flex items-center rounded-full border border-[#03372b]/15 bg-[#03372b]/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-[#03372b] sm:mb-6 sm:text-sm">
+              Golf Travel Hub
+            </span>
+
+            <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
+              Your next great round is just a{" "}
+              <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
+                swipe away
               </span>
+            </h2>
 
-              <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
-                Your next great round is just a{" "}
-                <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
-                  swipe away
-                </span>
-              </h2>
-
-              <p className="mt-5 text-base leading-relaxed text-zinc-600 sm:mt-6 sm:text-lg lg:leading-relaxed">
-                From local hidden gems to the world&apos;s most legendary courses,
-                play wherever your passion takes you.
-              </p>
-
-              <ul className="mt-8 flex flex-wrap gap-2 sm:gap-3">
-                {destinations.map((place) => (
-                  <li
-                    key={place.name}
-                    className="inline-flex flex-col rounded-2xl border border-[#03372b]/10 bg-[#03372b]/[0.04] px-4 py-2.5"
-                  >
-                    <span className="text-sm font-semibold text-[#03372b]">
-                      {place.name}
-                    </span>
-                    <span className="text-xs text-zinc-500">{place.region}</span>
-                  </li>
-                ))}
-                <li className="inline-flex items-center rounded-2xl border border-[#8cc129]/40 bg-[#8cc129]/10 px-4 py-2.5 text-sm font-semibold text-[#03372b]">
-                  +150 countries
-                </li>
-              </ul>
-            </div>
-
-            <div className="relative z-10 flex w-full justify-center lg:flex-1 lg:justify-end">
-              <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-4 rounded-[2rem] bg-[#8cc129]/25 blur-3xl sm:inset-6"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute -inset-2 rounded-[2.5rem] border border-[#03372b]/10 sm:-inset-3"
-                />
-
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-[0_24px_60px_-20px_rgba(3,55,43,0.35)] sm:aspect-[5/6] lg:aspect-square">
-                  <Image
-                    src="/asset/img/other/WhatsApp Image 2026-07-13 at 10.16.44 AM (9).jpeg"
-                    alt="Golf bag on a scenic mountain course — your next golf destination"
-                    fill
-                    className="object-cover object-center"
-                    sizes="(max-width: 1024px) 90vw, 36rem"
-                    priority
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-t from-[#03372b]/50 via-transparent to-[#8cc129]/10"
-                  />
-                </div>
-
-                <div
-                  aria-hidden="true"
-                  className="absolute -bottom-4 -left-4 h-20 w-20 rounded-full bg-[#8cc129]/35 blur-2xl sm:-bottom-6 sm:-left-6 sm:h-28 sm:w-28"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute -right-3 -top-3 h-16 w-16 rounded-full bg-[#03372b]/20 blur-2xl sm:-right-5 sm:-top-5 sm:h-24 sm:w-24"
-                />
-              </div>
-            </div>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-zinc-600 sm:mt-6 sm:text-lg lg:leading-relaxed">
+              From local hidden gems to the world&apos;s most legendary courses,
+              play wherever your passion takes you.
+            </p>
           </div>
         </div>
       </section>
@@ -140,7 +84,7 @@ export default function GolfTravelHub() {
 
                 <div className="relative overflow-hidden rounded-[2rem] border border-[#8cc129]/35 shadow-[0_0_40px_rgba(140,193,41,0.35),0_0_80px_rgba(140,193,41,0.18),0_24px_60px_-20px_rgba(0,0,0,0.55)] ring-1 ring-[#8cc129]/25 sm:rounded-[2.5rem]">
                   <Image
-                    src="/asset/img/other/home tt.png"
+                    src="/asset/img/geo-located map.webp"
                     alt="GolfSwipe app — swipe to discover and book golf tee times"
                     width={640}
                     height={1280}
