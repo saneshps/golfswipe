@@ -42,7 +42,8 @@ export default function Hero() {
               alt="GolfSwipe"
               width={200}
               height={200}
-              className="h-auto w-40"
+              className="animate-logo h-auto w-40 will-change-transform"
+              priority
             />
           </div>
           <span className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-700 sm:mb-6 sm:text-sm">
