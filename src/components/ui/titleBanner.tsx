@@ -43,21 +43,21 @@ export default function TitleBanner({
           </h1>
 
           <nav className="mt-3 sm:mt-4" aria-label="Breadcrumb">
-            <ol className="flex flex-wrap items-center gap-2 text-sm sm:text-base">
+            <ol className="flex flex-wrap items-center gap-x-1.5 text-sm sm:text-base">
               {breadcrumbs.map((item, index) => {
                 const isLast = index === breadcrumbs.length - 1;
 
                 return (
-                  <li key={`${item.label}-${index}`} className="flex items-center gap-2">
+                  <li key={`${item.label}-${index}`} className="flex items-center gap-x-1.5">
                     {index > 0 && (
-                      <span aria-hidden="true" className="text-white/45">
-                        /
+                      <span aria-hidden="true" className="text-white/80">
+                        -
                       </span>
                     )}
                     {item.href && !isLast ? (
                       <Link
                         href={item.href}
-                        className="text-white/75 transition-colors hover:text-[#8cc129]"
+                        className="text-[#8cc129] transition-colors hover:text-[#a3e635]"
                       >
                         {item.label}
                       </Link>
@@ -65,8 +65,8 @@ export default function TitleBanner({
                       <span
                         className={
                           isLast
-                            ? "font-medium text-[#8cc129]"
-                            : "text-white/75"
+                            ? " text-white"
+                            : "text-[#8cc129]"
                         }
                         aria-current={isLast ? "page" : undefined}
                       >

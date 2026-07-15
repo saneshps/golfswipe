@@ -9,7 +9,13 @@ export default function Marketplace() {
     <div className="flex min-h-full flex-1 flex-col bg-white font-sans dark:bg-black">
       <Header />
       <main className="flex flex-1 flex-col">
-        <TitleBanner title="Marketplace" breadcrumbs={[{ label: "Marketplace", href: "/marketplace" }]} />
+        <TitleBanner
+          title="Marketplace"
+          breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Marketplace" },
+          ]}
+        />
         <AboutGolfswipe />
         <MarketplacePricing />
       </main>
