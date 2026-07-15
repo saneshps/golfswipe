@@ -90,10 +90,10 @@ export default function Header() {
                     <Link
                       href={link.href}
                       aria-current={active ? "page" : undefined}
-                      className={`rounded-md tracking-wide transition-[padding,font-size,background-color,color] duration-300 hover:bg-[#03372b] hover:text-white ${
+                      className={`tracking-wide transition-[padding,font-size,border-color,color] duration-300 hover:text-[#03372b] ${
                         active
-                          ? "bg-[#03372b] font-medium text-white"
-                          : "text-black"
+                          ? "border-b-2 border-[#03372b] font-medium text-[#03372b]"
+                          : "border-b-2 border-transparent text-black"
                       } ${
                         scrolled
                           ? "px-2 py-1 text-sm"
