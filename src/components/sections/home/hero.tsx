@@ -49,9 +49,11 @@ export default function Hero() {
             GolfSwipe
           </span>
 
-          <h1 className="text-3xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl xl:text-[3.25rem] xl:leading-[1.1]">
-            The Global Clubhouse in Your Pocket.
-          </h1>
+          <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
+            <span className="bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-800 bg-clip-text text-transparent">
+              The Global Clubhouse in Your Pocket.
+            </span>
+          </h1> 
 
           <h2 className="mt-4 text-base font-normal leading-relaxed text-zinc-600 sm:mt-6 sm:text-lg lg:mt-5 lg:text-xl lg:leading-snug">
             Swipe gear. Plan shots. Find your fourball. All in one borderless app.

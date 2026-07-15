@@ -8,7 +8,7 @@ export default function GolfTravelHubPage() {
         <div className="flex min-h-full flex-1 flex-col bg-white font-sans dark:bg-black">
             <Header />
             <main className="flex flex-1 flex-col">  
-       <TitleBanner title="Golf Travel Hub" title="Golf Travel Hub"
+       <TitleBanner title="Golf Travel Hub"
           breadcrumbs={[
             { label: "Home", href: "/" },
             { label: "Golf Travel Hub" },
