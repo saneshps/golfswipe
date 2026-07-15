@@ -97,6 +97,18 @@ export default function Header() {
   }, [pathname]);
 
   useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 767) {
+        setMenuOpen(false);
+        setMobileFeaturesOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
     if (!desktopFeaturesOpen) return;
 
     const onPointerDown = (event: MouseEvent) => {
@@ -160,9 +172,9 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop navigation */}
+          {/* Desktop / tablet navigation — full menu from 767px up */}
           <nav
-            className="hidden flex-1 items-center justify-end gap-2 xl:flex xl:gap-3"
+            className="hidden min-[767px]:flex flex-1 items-center justify-end gap-2 min-[767px]:gap-3"
             aria-label="Main navigation"
           >
             <ul className="flex flex-wrap items-center justify-end gap-x-0.5 gap-y-1">
@@ -280,10 +292,10 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Hamburger — mobile & tablet */}
+          {/* Hamburger — below 767px only */}
           <button
             type="button"
-            className={`flex shrink-0 items-center justify-center rounded-lg border border-[#03372b] bg-[#03372b] text-white transition-all duration-300 hover:bg-[#024a3a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#03372b] focus-visible:ring-offset-2 xl:hidden ${
+            className={`flex shrink-0 items-center justify-center rounded-lg border border-[#03372b] bg-[#03372b] text-white transition-all duration-300 hover:bg-[#024a3a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#03372b] focus-visible:ring-offset-2 min-[767px]:hidden ${
               scrolled ? "h-9 w-9" : "h-10 w-10"
             }`}
             aria-expanded={menuOpen}
@@ -315,9 +327,9 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile overlay */}
+      {/* Mobile overlay — below 767px only */}
       <div
-        className={`fixed inset-0 z-60 bg-black/50 backdrop-blur-sm transition-opacity duration-300 xl:hidden ${
+        className={`fixed inset-0 z-60 bg-black/50 backdrop-blur-sm transition-opacity duration-300 min-[767px]:hidden ${
           menuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -326,10 +338,10 @@ export default function Header() {
         onClick={closeMenu}
       />
 
-      {/* Mobile menu panel */}
+      {/* Mobile menu panel — below 767px only */}
       <nav
         id="mobile-nav"
-        className={`fixed right-0 top-0 z-70 flex h-dvh w-[min(100vw,20rem)] flex-col bg-[#03372b] text-white shadow-2xl transition-transform duration-300 ease-in-out xl:hidden ${
+        className={`fixed right-0 top-0 z-70 flex h-dvh w-[min(100vw,20rem)] flex-col bg-[#03372b] text-white shadow-2xl transition-transform duration-300 ease-in-out min-[767px]:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         aria-label="Mobile navigation"
