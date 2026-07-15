@@ -219,11 +219,21 @@ export default function MeetUpMapCalendar() {
 
             <div className="relative z-10 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-sm sm:max-w-md">
+                {/* Core glow halo */}
                 <div
                   aria-hidden="true"
-                  className="absolute inset-6 rounded-[2rem] bg-[#8cc129]/30 blur-3xl"
+                  className="absolute inset-4 rounded-[2rem] bg-[#8cc129]/40 blur-3xl sm:inset-6"
                 />
-                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.55)] sm:rounded-[2.5rem]">
+                <div
+                  aria-hidden="true"
+                  className="absolute -inset-3 rounded-[2.5rem] bg-[#8cc129]/20 blur-[60px] sm:-inset-4"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-[#8cc129]/25 via-transparent to-[#c4e86a]/15 blur-2xl"
+                />
+
+                <div className="relative overflow-hidden rounded-[2rem] border border-[#8cc129]/35 shadow-[0_0_40px_rgba(140,193,41,0.35),0_0_80px_rgba(140,193,41,0.18),0_24px_60px_-20px_rgba(0,0,0,0.55)] ring-1 ring-[#8cc129]/25 sm:rounded-[2.5rem]">
                   <Image
                     src="/asset/img/geo-located map.webp"
                     alt="GolfSwipe app — Find Players and plan your next round"
@@ -233,6 +243,16 @@ export default function MeetUpMapCalendar() {
                     sizes="(max-width: 640px) 90vw, 28rem"
                   />
                 </div>
+
+                {/* Corner accent glows */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[#8cc129]/45 blur-2xl sm:-bottom-6 sm:-left-6 sm:h-32 sm:w-32"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -right-3 -top-3 h-20 w-20 rounded-full bg-[#c4e86a]/35 blur-2xl sm:-right-5 sm:-top-5 sm:h-28 sm:w-28"
+                />
               </div>
             </div>
           </div>
