@@ -84,7 +84,7 @@ export default function GolfTravelHub() {
 
                 <div className="relative overflow-hidden rounded-[2rem] border border-[#8cc129]/35 shadow-[0_0_40px_rgba(140,193,41,0.35),0_0_80px_rgba(140,193,41,0.18),0_24px_60px_-20px_rgba(0,0,0,0.55)] ring-1 ring-[#8cc129]/25 sm:rounded-[2.5rem]">
                   <Image
-                    src="/asset/img/geo-located map.webp"
+                    src="/asset/img/weekend-trip.webp"
                     alt="GolfSwipe app — swipe to discover and book golf tee times"
                     width={640}
                     height={1280}
@@ -205,7 +205,7 @@ export default function GolfTravelHub() {
 
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-[0_24px_60px_-20px_rgba(3,55,43,0.35)] sm:aspect-[5/6] lg:aspect-[4/3]">
                   <Image
-                    src="/asset/img/other/zip/2148295319.jpg"
+                    src="/asset/img/unforgettable.webp"
                     alt="Friends enjoying a round together on a golf course"
                     fill
                     className="object-cover object-center"
