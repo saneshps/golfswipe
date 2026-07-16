@@ -22,7 +22,7 @@ export default function TitleBanner({
   imageAlt = "",
 }: TitleBannerProps) {
   return (
-    <section className="relative h-[280px] w-full overflow-hidden sm:h-[320px] md:h-[350px]">
+    <section className="relative h-[180px] w-full overflow-hidden sm:h-[220px] md:h-[250px]">
       <Image
         src={imageSrc}
         alt={imageAlt}
@@ -38,7 +38,7 @@ export default function TitleBanner({
 
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full px-4 sm:px-6 md:w-[90%] lg:w-[90%] lg:px-8 xl:w-[90%] 2xl:w-[85%]">
-          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
             {title}
           </h1>
 
