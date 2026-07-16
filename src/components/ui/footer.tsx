@@ -224,7 +224,7 @@ export default function Footer() {
                   <AppleIcon className="h-6 w-6 shrink-0 text-white transition-transform duration-300 group-hover:scale-110" />
                   <span className="flex flex-col items-start leading-none">
                     <span className="text-[9px] font-medium uppercase tracking-wide text-zinc-400">
-                      Download on the
+                     Coming Soon On
                     </span>
                     <span className="mt-0.5 text-sm font-semibold tracking-tight">App Store</span>
                   </span>
@@ -233,7 +233,7 @@ export default function Footer() {
                   <GooglePlayIcon className="h-6 w-6 shrink-0 text-emerald-400 transition-transform duration-300 group-hover:scale-110" />
                   <span className="flex flex-col items-start leading-none">
                     <span className="text-[9px] font-medium uppercase tracking-wide text-zinc-400">
-                      Get it on
+                    Coming Soon On
                     </span>
                     <span className="mt-0.5 text-sm font-semibold tracking-tight">Google Play</span>
                   </span>
