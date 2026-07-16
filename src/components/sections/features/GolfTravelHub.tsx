@@ -72,7 +72,7 @@ export default function GolfTravelHub() {
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
             <div className="relative z-10 order-2 flex justify-center lg:order-1 lg:justify-start">
-              <div className="relative w-full max-w-sm sm:max-w-md">
+              <div className="relative w-full">
                 <div
                   aria-hidden="true"
                   className="absolute inset-4 rounded-[2rem] bg-[#8cc129]/40 blur-3xl sm:inset-6"

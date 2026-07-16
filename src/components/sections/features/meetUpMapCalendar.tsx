@@ -218,7 +218,7 @@ export default function MeetUpMapCalendar() {
             </div>
 
             <div className="relative z-10 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-sm sm:max-w-md">
+              <div className="relative w-full">
                 {/* Core glow halo */}
                 <div
                   aria-hidden="true"

@@ -65,7 +65,7 @@ export default function Hero() {
               <AppleIcon className="h-7 w-7 shrink-0 text-white transition-transform duration-300 group-hover:scale-110 sm:h-8 sm:w-8" />
               <span className="flex flex-col items-start leading-none">
                 <span className="text-[10px] font-medium uppercase tracking-wide text-zinc-400 sm:text-[11px]">
-                  Download on the
+                Coming soon on
                 </span>
                 <span className="mt-0.5 text-base font-semibold tracking-tight sm:text-lg">
                   App Store
@@ -77,7 +77,7 @@ export default function Hero() {
               <GooglePlayIcon className="h-7 w-7 shrink-0 text-emerald-400 transition-transform duration-300 group-hover:scale-110 sm:h-8 sm:w-8" />
               <span className="flex flex-col items-start leading-none">
                 <span className="text-[10px] font-medium uppercase tracking-wide text-zinc-400 sm:text-[11px]">
-                  Get it on
+                Coming soon on
                 </span>
                 <span className="mt-0.5 text-base font-semibold tracking-tight sm:text-lg">
                   Google Play
