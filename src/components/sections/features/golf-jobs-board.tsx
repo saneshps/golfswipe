@@ -1,15 +1,42 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
+
+function Highlight({ children }: { children: ReactNode }) {
+  return (
+    <mark className="rounded-sm bg-[#fff]/25 px-0.5 font-semibold text-[#03372b] [box-decoration-break:clone]">
+      {children}
+    </mark>
+  );
+}
 
 const audiences = [
   {
     label: "For Clubs & Employers",
-    description:
-      "Post open roles—from greenkeepers and pro shop assistants to caddies and clubhouse managers—for just £10/week. We don’t collect CVs or store applicant data, meaning zero GDPR or privacy liabilities for your business. Candidates apply to you directly.",
+    description: (
+      <>
+        Post open roles—from greenkeepers and pro shop assistants to caddies and
+        clubhouse managers—for just{" "}
+        <Highlight>£10/week</Highlight>.{" "}
+        <Highlight>
+          We don&apos;t collect CVs or store applicant data
+        </Highlight>
+        , meaning{" "}
+        <Highlight>zero GDPR or privacy liabilities</Highlight> for your
+        business.{" "}
+        <Highlight>Candidates apply to you directly</Highlight>.
+      </>
+    ),
   },
   {
     label: "For Job Seekers",
-    description:
-      "Browse highly targeted industry roles globally and apply directly to decision-makers with a single tap.",
+    description: (
+      <>
+        Browse{" "}
+        <Highlight>highly targeted industry roles globally</Highlight> and{" "}
+        <Highlight>apply directly to decision-makers</Highlight> with a{" "}
+        <Highlight>single tap</Highlight>.
+      </>
+    ),
   },
 ];
 
