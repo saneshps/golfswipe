@@ -81,8 +81,13 @@ export default function Header() {
   }, [menuOpen]);
 
   useEffect(() => {
+    // Hysteresis so the compact/expanded toggle doesn't flicker near the threshold.
     const onScroll = () => {
-      setScrolled(window.scrollY > 24);
+      const y = window.scrollY;
+      setScrolled((prev) => {
+        if (prev) return y > 16;
+        return y > 40;
+      });
     };
 
     onScroll();
@@ -139,8 +144,16 @@ export default function Header() {
 
   return (
     <>
+      {/*
+        Spacer always reserves the expanded header height. The real header is fixed
+        so shrinking it on scroll does not change document height / scrollY (no shake).
+      */}
+      <div
+        className="h-16 w-full shrink-0 sm:h-20 lg:h-24 xl:h-30"
+        aria-hidden="true"
+      />
       <header
-        className={`sticky top-0 z-50 w-full border-b transition-[height,background-color,box-shadow,border-color,backdrop-filter] duration-300 ease-out ${
+        className={`fixed top-0 left-0 right-0 z-50 w-full border-b [overflow-anchor:none] transition-[background-color,box-shadow,border-color,backdrop-filter] duration-300 ease-out ${
           scrolled
             ? "border-emerald-900/10 bg-white/95 shadow-[0_4px_24px_rgba(3,55,43,0.08)] backdrop-blur-xl"
             : "border-transparent bg-white shadow-none"
@@ -148,9 +161,7 @@ export default function Header() {
       >
         <div
           className={`mx-auto flex w-full max-w-[1600px] items-center justify-between gap-3 px-4 transition-[height,padding] duration-300 ease-out sm:px-6 lg:w-[90%] lg:px-8 2xl:w-[85%] ${
-            scrolled
-              ? "h-14 sm:h-20"
-              : "h-16 sm:h-20 lg:h-24 xl:h-30"
+            scrolled ? "h-14 sm:h-20" : "h-16 sm:h-20 lg:h-24 xl:h-30"
           }`}
         >
           <Link
