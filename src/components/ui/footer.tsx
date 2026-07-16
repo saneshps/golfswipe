@@ -188,7 +188,7 @@ export default function Footer() {
                   alt="Golf Swipe"
                   width={180}
                   height={42}
-                  className="animate-logo h-14 w-auto brightness-0 invert will-change-transform transition-opacity duration-300 group-hover:opacity-90 sm:h-16 lg:h-[4.5rem]"
+                  className="h-14 w-auto brightness-0 invert will-change-transform animate-logo motion-reduce:animate-none transition-opacity duration-300 group-hover:opacity-90 sm:h-16 lg:h-[4.5rem]"
                 />
               </Link>
               <p className="max-w-[16rem] text-sm leading-relaxed text-zinc-400">

@@ -42,7 +42,7 @@ export default function Hero() {
               alt="GolfSwipe"
               width={200}
               height={200}
-              className="h-auto w-40 animate-pulse"
+              className="h-auto w-40 will-change-transform animate-logo motion-reduce:animate-none"
               priority
             />
           </div>
