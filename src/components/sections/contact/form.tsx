@@ -216,10 +216,10 @@ export default function Form() {
                           Email
                         </p>
                         <Link
-                          href="mailto:hello@golfswipe.com"
+                          href="mailto:support@golfswipe.co.uk"
                           className="mt-1 block break-all text-base font-semibold text-white transition-colors hover:text-[#8cc129] sm:text-lg"
                         >
-                          hello@golfswipe.com
+                         support@golfswipe.co.uk
                         </Link>
                       </div>
                     </div>
@@ -251,7 +251,8 @@ export default function Form() {
                           Monday – Friday
                         </p>
                         <p className="mt-0.5 text-sm text-white/65 sm:text-base">
-                          9:00 AM – 6:00 PM (GMT)
+                          9:00 AM – 5:00 PM (UK Time)
+                          
                         </p>
                         <p className="mt-2 text-sm text-white/50">
                           Closed weekends &amp; public holidays
