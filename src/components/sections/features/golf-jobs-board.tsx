@@ -97,7 +97,7 @@ export default function GolfJobsBoard() {
                 <div className="relative overflow-hidden rounded-[2rem] border border-[#03372b]/10 bg-white shadow-[0_20px_50px_-12px_rgba(3,55,43,0.15)] sm:rounded-[1.5rem]">
                   <div className="relative h-[420px] w-full sm:h-[500px]">
                     <Image
-                      src="/asset/img/job.webp"
+                      src="/asset/img/about-golf.webp"
                       alt="GolfSwipe app — Golf Jobs Board connecting clubs and talent"
                       fill
                       className="object-cover object-top"

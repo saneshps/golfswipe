@@ -57,7 +57,7 @@ export default function About() {
 
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border ring-1 sm:aspect-[5/6] lg:aspect-square">
                 <Image
-                  src="/asset/img/about-golf.webp"
+                  src="/asset/img/player.webp"
                   alt="Golfer on the course at golden hour"
                   fill
                   className="object-cover object-center"

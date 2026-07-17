@@ -25,9 +25,9 @@ export default function AboutGolfswipe() {
             </span>
 
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
-              The World&apos;s fastest growing{" "}
+            The worlds fastest growing{" "}
               <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
-                Golf Ecosystem App.
+              borderless golf marketplace
               </span>
             </h2>
 
@@ -50,7 +50,7 @@ export default function AboutGolfswipe() {
               </p>
 
               <p>
-                When you find the perfect match, our optional integrated TrustaAp
+                When you find the perfect match, our optional integrated TrustAp
                 Escrow Service locks the funds securely in a digital vault. The
                 seller gets paid only when the gear arrives at your door and you
                 verify it&apos;s exactly what you ordered.{" "}
