@@ -15,7 +15,6 @@
   --color-secondary: var(--secondary);
   --color-light: var(--light-color);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --animate-logo: logo-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) both,
     logo-float 3.2s ease-in-out 0.7s infinite;
 
@@ -51,7 +50,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
  
 

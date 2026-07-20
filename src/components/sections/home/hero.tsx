@@ -43,7 +43,6 @@ export default function Hero() {
               width={200}
               height={200}
               className="h-auto w-40 will-change-transform animate-logo motion-reduce:animate-none"
-              priority
             />
           </div>
        
@@ -92,7 +91,8 @@ export default function Hero() {
               src="/asset/img/banner-new.webp"
               alt="GolfSwipe app on mobile"
               fill
-              priority
+              loading="eager"
+              fetchPriority="high"
               className="object-contain object-center lg:object-right"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />

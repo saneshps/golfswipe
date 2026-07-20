@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,7 +25,8 @@ export default function TitleBanner({
         src={imageSrc}
         alt={imageAlt}
         fill
-        priority
+        loading="eager"
+        fetchPriority="high"
         className="object-cover object-center"
         sizes="100vw"
         aria-hidden={imageAlt ? undefined : true}

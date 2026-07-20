@@ -175,7 +175,8 @@ export default function Header() {
               alt="Golf Swipe"
               width={180}
               height={48}
-              priority
+              loading="eager"
+              fetchPriority="high"
               className={`w-auto transition-[height,width] duration-300 ease-out ${
                 scrolled
                   ? "h-12 sm:h-9 lg:h-15"

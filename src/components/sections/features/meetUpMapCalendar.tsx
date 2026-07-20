@@ -148,7 +148,8 @@ export default function MeetUpMapCalendar() {
                     fill
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 90vw, 36rem"
-                    priority
+                    loading="eager"
+                    fetchPriority="high"
                   />
                   <div
                     aria-hidden="true"
