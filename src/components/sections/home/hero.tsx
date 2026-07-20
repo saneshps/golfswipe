@@ -46,9 +46,7 @@ export default function Hero() {
               priority
             />
           </div>
-          <span className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-700 sm:mb-6 sm:text-sm">
-            GolfSwipe
-          </span>
+       
 
           <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
             <span className="bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-800 bg-clip-text text-transparent">

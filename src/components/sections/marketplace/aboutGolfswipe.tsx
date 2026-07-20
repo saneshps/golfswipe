@@ -64,27 +64,27 @@ export default function AboutGolfswipe() {
 
           {/* Right — image */}
           <div className="relative z-10 flex w-full justify-center lg:flex-1 lg:justify-end">
-            <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl">
+            <div className="relative -mx-4 w-[calc(100%+2rem)] max-w-none sm:mx-0 sm:w-full sm:max-w-lg lg:max-w-xl xl:max-w-2xl">
               <div
                 aria-hidden="true"
-                className="absolute inset-4 rounded-[2rem] bg-[#8cc129]/25 blur-3xl sm:inset-6"
+                className="absolute inset-4 rounded-none bg-[#8cc129]/25 blur-3xl sm:rounded-[2rem] sm:inset-6"
               />
               <div
                 aria-hidden="true"
-                className="absolute -inset-2 rounded-[2.5rem] border border-[#03372b]/10 sm:-inset-3"
+                className="absolute -inset-2 rounded-none border border-[#03372b]/10 sm:-inset-3 sm:rounded-[2.5rem]"
               />
 
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-[0_24px_60px_-20px_rgba(3,55,43,0.35)] sm:aspect-[5/6] lg:aspect-square">
+              <div className="relative aspect-[912/950] w-full overflow-hidden rounded-none shadow-[0_24px_60px_-20px_rgba(3,55,43,0.35)] sm:rounded-3xl lg:aspect-square">
                 <Image
-                  src="/asset/img/aboutGolfswipe.webp"
+                  src="/asset/img/marketplace-mobile.webp"
                   alt="GolfSwipe marketplace — browse and trade golf gear with confidence"
                   fill
                   className="object-cover object-center"
-                  sizes="(max-width: 1024px) 90vw, 36rem"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 36rem"
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-[#03372b]/40 via-transparent to-[#8cc129]/10"
+                  className="absolute inset-0 hidden bg-gradient-to-t from-[#03372b]/40 via-transparent to-[#8cc129]/10 lg:block"
                 />
               </div>
 
