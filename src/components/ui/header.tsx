@@ -33,6 +33,7 @@ const navLinks: NavLink[] = [
       { label: "Bi-Weekly Rules Quiz", href: "/bi-weekly-rules-quiz" },
       { label: "The Clubhouse Forum", href: "/clubhouse-forum" },
       { label: "Golf Jobs Board", href: "/golf-jobs-board" },
+      { label: "Weather Updates", href: "/weather-updates" },
     ],
   },
   { label: "Contact Us", href: "/contact-us" },

@@ -110,7 +110,8 @@ export default function GpsCourseMapsShotPlanner() {
              
             </div>
           </div>
-        </div>
+        </div> 
+
       </section>
     </>
   );
