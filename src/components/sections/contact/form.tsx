@@ -216,10 +216,10 @@ export default function Form() {
                           Email
                         </p>
                         <Link
-                          href="mailto:support@golfswipe.co.uk"
+                          href="mailto:info@golfswipe.golf"
                           className="mt-1 block break-all text-base font-semibold text-white transition-colors hover:text-[#8cc129] sm:text-lg"
                         >
-                         support@golfswipe.co.uk
+                         info@golfswipe.golf
                         </Link>
                       </div>
                     </div>
