@@ -16,7 +16,7 @@ const audiences = [
       <>
         Post open roles—from greenkeepers and pro shop assistants to caddies and
         clubhouse managers—for just{" "}
-        <Highlight>£10/week</Highlight>.{" "}
+        <Highlight>£7.50/week</Highlight>.{" "}
         <Highlight>
           We don&apos;t collect CVs or store applicant data
         </Highlight>
