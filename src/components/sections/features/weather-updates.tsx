@@ -3,14 +3,17 @@ const benefits = [
     id: "budget",
     title: (
       <>
-        Perfect for your startup{" "}
+        GolfSwipe Weather –{" "}
         <span className="bg-gradient-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
-          budget
+        Know Before You Go
         </span>
       </>
     ),
-    description:
-      "100% free, no API key required, no usage caps for typical launch volumes (~10k calls/day)",
+    content: [
+      "Perfect conditions for every round, every time",
+      "Whether you’re buying new clubs, planning a weekend trip, or just heading out for 18 – know exactly what to expect before you leave the house.",
+      "Only GolfSwipe puts accurate, golf-focused weather right where you need it.",
+    ],
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -32,14 +35,19 @@ const benefits = [
     id: "golf-data",
     title: (
       <>
-        Golf-ready data out of the{" "}
+        What You{" "}
         <span className="bg-gradient-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
-          box
+        Get
         </span>
       </>
     ),
-    description:
-      "Temperature, wind speed/direction/gusts, rain probability, precipitation amount, humidity, UV index",
+    content: [
+      "Live local conditions: Temperature, wind speed/direction, gusts, humidity & UV index",
+      "Precision forecasts: Hourly breakdowns + 3-day outlook for any course worldwide",
+      "Rain timing: See exactly when showers start and stop – no more getting caught short",
+      "Course-linked data: Automatically matches forecasts to any club or listing location",
+      "Playability guide: Clear simple rating – Excellent / Good / Fair / Poor",
+    ],
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -67,14 +75,17 @@ const benefits = [
     id: "global",
     title: (
       <>
-        Global coverage with high{" "}
+        Why It Matters{" "}
         <span className="bg-gradient-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
-          accuracy
+        For You
         </span>
       </>
     ),
-    description:
-      "1km resolution across UK/Europe, works worldwide for your planned international launches",
+    content: [
+      "Buying gear? Check conditions before you commit – see if those new irons will get used this weekend.", 
+      "Selling gear? Better weather = more buyers browsing and ready to act.", 
+      "Planning a round? Tee time confirmed? Know exactly how to dress and which clubs to bring.", 
+    ],
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -97,14 +108,16 @@ const benefits = [
     id: "no-lock-in",
     title: (
       <>
-        No{" "}
+        Only On{" "}
         <span className="bg-gradient-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
-          lock-in
+        GolfSwipe
         </span>
       </>
     ),
-    description:
-      "Easy to swap or add a second provider later as you scale",
+    content: [
+      "No other golf marketplace integrates accurate, location-specific weather natively. Everything you need – trading, safety, course info, and conditions – all in one place.",
+      "Available to all users – upgrade to All Access for minute-by-minute updates and 14-day forecasts.",
+    ],
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -157,9 +170,16 @@ export default function WeatherUpdates() {
                   {item.title}
                 </h3>
 
-                <p className="mt-4 text-base leading-relaxed text-[#03372b]/70 sm:mt-5 sm:text-lg">
-                  {item.description}
-                </p>
+                <ul className="mt-4 space-y-1.5 text-base leading-relaxed text-[#03372b]/70 sm:mt-5 sm:text-lg">
+                  {item.content.map((line) => (
+                    <li key={line} className="flex items-start gap-2">
+                      <span aria-hidden="true" className="mt-0 shrink-0 text-[#8cc129]">
+                        →
+                      </span>
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>

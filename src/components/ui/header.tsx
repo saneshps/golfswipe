@@ -354,7 +354,7 @@ export default function Header() {
       {/* Mobile menu panel — below 767px only */}
       <nav
         id="mobile-nav"
-        className={`fixed right-0 top-0 z-70 flex h-dvh w-[min(100vw,20rem)] flex-col bg-[#03372b] text-white shadow-2xl transition-transform duration-300 ease-in-out min-[767px]:hidden ${
+        className={`fixed right-0 top-0 z-70 flex h-dvh w-[min(100vw,20rem)] flex-col bg-[#001e17] text-white shadow-2xl transition-transform duration-300 ease-in-out min-[767px]:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         aria-label="Mobile navigation"
@@ -367,7 +367,7 @@ export default function Header() {
               alt="Golf Swipe"
               width={120}
               height={28}
-              className="h-9 w-auto"
+              className="h-9 w-auto brightness-0 invert"
             />
           </Link>
           <button
