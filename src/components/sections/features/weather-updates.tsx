@@ -133,7 +133,7 @@ const benefits = [
 export default function WeatherUpdates() {
   return (
     <>
-      <section className="relative w-full overflow-hidden bg-white">
+      <section className="relative w-full overflow-hidden bg-light-gray">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(140,193,41,0.12),transparent_55%)]"
@@ -154,7 +154,7 @@ export default function WeatherUpdates() {
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
           <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-2 md:gap-x-10 md:gap-y-14 lg:gap-x-14 xl:gap-x-20 xl:gap-y-16">
             {benefits.map((item) => (
-              <article key={item.id} className="relative z-10 bg-[#8cc129]/10 rounded-[20px] p-5">
+              <article key={item.id} className="relative z-10 bg-white rounded-[20px] p-5">
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-[#03372b]/10 bg-[#8cc129]/10 text-[#03372b] sm:mb-5 sm:h-14 sm:w-14">
                   {item.icon}
                 </div>
