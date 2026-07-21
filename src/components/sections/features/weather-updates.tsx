@@ -4,7 +4,7 @@ const benefits = [
     title: (
       <>
         GolfSwipe Weather –{" "}
-        <span className="bg-gradient-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
         Know Before You Go
         </span>
       </>
@@ -36,7 +36,7 @@ const benefits = [
     title: (
       <>
         What You{" "}
-        <span className="bg-gradient-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
         Get
         </span>
       </>
@@ -73,7 +73,7 @@ const benefits = [
     title: (
       <>
         Why It Matters{" "}
-        <span className="bg-gradient-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
         For You
         </span>
       </>
@@ -104,7 +104,7 @@ const benefits = [
     title: (
       <>
         Only On{" "}
-        <span className="bg-gradient-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
         GolfSwipe
         </span>
       </>
@@ -148,13 +148,13 @@ export default function WeatherUpdates() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/40 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
           <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-2 md:gap-x-10 md:gap-y-14 lg:gap-x-14 xl:gap-x-20 xl:gap-y-16">
             {benefits.map((item) => (
-              <article key={item.id} className="relative z-10 bg-[#8cc129]/10 rounded-[20px] p-[20px]">
+              <article key={item.id} className="relative z-10 bg-[#8cc129]/10 rounded-[20px] p-5">
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-[#03372b]/10 bg-[#8cc129]/10 text-[#03372b] sm:mb-5 sm:h-14 sm:w-14">
                   {item.icon}
                 </div>
