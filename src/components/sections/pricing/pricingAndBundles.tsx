@@ -1,7 +1,7 @@
 const plans = [
   {
     name: "Weekly Pass",
-    price: "£1.99",
+    price: "£2.50",
     period: "/ week",
     description: "Perfect for traveling golfers or casual players.",
     features: [
@@ -12,7 +12,7 @@ const plans = [
   },
   {
     name: "All-Access Monthly",
-    price: "£7.99",
+    price: "£8.99",
     period: "/ month",
     description: "Full, unlimited access to the entire GolfSwipe ecosystem.",
     features: [
@@ -76,7 +76,7 @@ export default function PricingAndBundles() {
     <section className="relative w-full overflow-hidden bg-light-gray">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/50 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/50 to-transparent"
       />
       <div
         aria-hidden="true"
@@ -99,7 +99,7 @@ export default function PricingAndBundles() {
 
           <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
             Choose Your Access.{" "}
-            <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
               Elevate Your Game.
             </span>
           </h2>
@@ -121,7 +121,7 @@ export default function PricingAndBundles() {
                 className={[
                   "group relative flex flex-col overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl",
                   isFeatured
-                    ? "border border-[#8cc129]/50 bg-gradient-to-b from-[#03372b] to-[#054e3d] shadow-[0_24px_60px_-20px_rgba(3,55,43,0.55)] ring-1 ring-[#8cc129]/30"
+                    ? "border border-[#8cc129]/50 bg-linear-to-b from-[#03372b] to-[#054e3d] shadow-[0_24px_60px_-20px_rgba(3,55,43,0.55)] ring-1 ring-[#8cc129]/30"
                     : isDark
                       ? "border border-[#03372b]/20 bg-[#03372b] shadow-[0_20px_50px_-24px_rgba(3,55,43,0.45)]"
                       : "border border-[#03372b]/10 bg-white shadow-[0_16px_40px_-24px_rgba(3,55,43,0.25)]",
@@ -135,7 +135,7 @@ export default function PricingAndBundles() {
                     />
                     <div
                       aria-hidden="true"
-                      className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/70 to-transparent"
+                      className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/70 to-transparent"
                     />
                   </>
                 )}
@@ -148,7 +148,7 @@ export default function PricingAndBundles() {
                   ) : (
                     <span
                       aria-hidden="true"
-                      className="mb-4 hidden h-[26px] xl:mb-5 xl:block xl:h-[28px]"
+                      className="mb-4 hidden h-6.5 xl:mb-5 xl:block xl:h-7"
                     />
                   )}
 
@@ -201,7 +201,7 @@ export default function PricingAndBundles() {
                     className={[
                       "my-5 h-px w-full sm:my-6",
                       isFeatured
-                        ? "bg-gradient-to-r from-transparent via-[#8cc129]/40 to-transparent"
+                        ? "bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
                         : isDark
                           ? "bg-white/10"
                           : "bg-[#03372b]/10",
