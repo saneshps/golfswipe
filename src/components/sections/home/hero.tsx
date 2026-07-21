@@ -88,7 +88,7 @@ export default function Hero() {
         <div className="relative flex w-full justify-center lg:w-auto lg:flex-1 lg:justify-end">
           <div className="relative aspect-[4/3] w-full max-w-md sm:max-w-lg lg:aspect-auto lg:h-[min(70vh,560px)] lg:max-w-none lg:w-full">
             <Image
-              src="/asset/img/banner-new.webp"
+              src="/asset/img/banner.webp"
               alt="GolfSwipe app on mobile"
               fill
               loading="eager"
