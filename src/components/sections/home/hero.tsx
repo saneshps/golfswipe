@@ -48,7 +48,7 @@ export default function Hero() {
        
 
           <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
-            <span className="bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-800 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-emerald-800 via-emerald-700 to-teal-800 bg-clip-text text-transparent">
               The Global Clubhouse in Your Pocket.
             </span>
           </h1> 
@@ -86,7 +86,7 @@ export default function Hero() {
 
         {/* Right — banner image */}
         <div className="relative flex w-full justify-center lg:w-auto lg:flex-1 lg:justify-end">
-          <div className="relative aspect-[4/3] w-full max-w-md sm:max-w-lg lg:aspect-auto lg:h-[min(70vh,560px)] lg:max-w-none lg:w-full">
+          <div className="relative aspect-4/3 w-full max-w-md sm:max-w-lg lg:aspect-auto lg:h-[min(70vh,560px)] lg:max-w-none lg:w-full">
             <Image
               src="/asset/img/banner.webp"
               alt="GolfSwipe app on mobile"
