@@ -25,9 +25,9 @@ const benefits = [
         className="h-6 w-6 sm:h-7 sm:w-7"
         aria-hidden="true"
       >
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 7v10" />
-        <path d="M9.5 9.5c0-1.1 1.12-2 2.5-2s2.5.9 2.5 2-1.12 2-2.5 2-2.5.9-2.5 2 1.12 2 2.5 2 2.5-.9 2.5-2" />
+        <path d="M17.5 14a4.5 4.5 0 1 0-1.1-8.85A6 6 0 0 0 6.1 9.1 4 4 0 0 0 6 17h11.5" />
+        <path d="M12 17v3" />
+        <path d="M9 20h6" />
       </svg>
     ),
   },
@@ -59,15 +59,12 @@ const benefits = [
         className="h-6 w-6 sm:h-7 sm:w-7"
         aria-hidden="true"
       >
-        <path d="M12 3v2" />
-        <path d="M12 19v2" />
-        <path d="M5.6 5.6l1.4 1.4" />
-        <path d="M17 17l1.4 1.4" />
-        <path d="M3 12h2" />
-        <path d="M19 12h2" />
-        <path d="M5.6 18.4l1.4-1.4" />
-        <path d="M17 7l1.4-1.4" />
-        <circle cx="12" cy="12" r="4" />
+        <path d="M9 6h11" />
+        <path d="M9 12h11" />
+        <path d="M9 18h11" />
+        <path d="M4 6.5l1 1 2-2.5" />
+        <path d="M4 12.5l1 1 2-2.5" />
+        <path d="M4 18.5l1 1 2-2.5" />
       </svg>
     ),
   },
@@ -97,10 +94,8 @@ const benefits = [
         className="h-6 w-6 sm:h-7 sm:w-7"
         aria-hidden="true"
       >
-        <circle cx="12" cy="12" r="9" />
-        <path d="M3 12h18" />
-        <path d="M12 3a14 14 0 0 1 0 18" />
-        <path d="M12 3a14 14 0 0 0 0 18" />
+        <circle cx="12" cy="8" r="3.25" />
+        <path d="M5.5 19.5c1.4-3.2 3.7-4.75 6.5-4.75s5.1 1.55 6.5 4.75" />
       </svg>
     ),
   },
@@ -129,9 +124,7 @@ const benefits = [
         className="h-6 w-6 sm:h-7 sm:w-7"
         aria-hidden="true"
       >
-        <rect x="4" y="11" width="16" height="10" rx="2" />
-        <path d="M8 11V8a4 4 0 0 1 7.5-1.9" />
-        <circle cx="12" cy="16" r="1.25" fill="currentColor" stroke="none" />
+        <path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4L7.5 16.7l.9-5L4.8 8.2l5-.7L12 3z" />
       </svg>
     ),
   },
