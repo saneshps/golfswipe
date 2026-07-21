@@ -36,7 +36,7 @@ export default function Hero() {
       <div className="md:w-[90%] lg:w-[90%] xl:w-[90%] 2xl:w-[85%] mx-auto flex flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:px-8 lg:py-20 xl:py-24">
         {/* Left — content */}
         <div className="w-full max-w-xl text-center lg:max-w-lg lg:flex-1 lg:text-left xl:max-w-xl">
-          <div className="mb-6 flex items-center justify-center rounded-[20px] bg-[#4e700e] py-10 lg:hidden">
+          <div className="mb-6 flex items-center justify-center rounded-[20px] border border-primary py-10 lg:hidden">
             <Image
               src="/asset/img/golf-swipe-logo.png"
               alt="GolfSwipe"
