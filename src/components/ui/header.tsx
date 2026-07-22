@@ -34,6 +34,7 @@ const navLinks: NavLink[] = [
       { label: "The Clubhouse Forum", href: "/clubhouse-forum" },
       { label: "Golf Jobs Board", href: "/golf-jobs-board" },
       { label: "Weather Updates", href: "/weather-updates" },
+      { label: "Buyer and Seller Protection", href: "/buyer-and-seller-protection" },
     ],
   },
   { label: "Contact Us", href: "/contact-us" },
