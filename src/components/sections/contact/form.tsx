@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import type { FormEvent } from "react";
 
 const inputClass =
   "w-full rounded-xl border border-[#03372b]/12 bg-white px-4 py-3 text-base text-[#03372b] shadow-sm outline-none transition-all duration-200 placeholder:text-zinc-400 focus:border-[#8cc129] focus:ring-2 focus:ring-[#8cc129]/25";
@@ -9,6 +11,13 @@ const labelClass =
   "mb-1.5 block text-sm font-medium tracking-wide text-[#03372b]";
 
 export default function Form() {
+  const router = useRouter();
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    router.push("/thank-you");
+  }
+
   return (
     <section className="relative w-full overflow-hidden bg-white">
       <div
@@ -45,8 +54,9 @@ export default function Form() {
           {/* Left — form */}
           <div className="relative z-10 lg:col-span-3">
             <form
-              action="#"
+              action="/thank-you"
               method="post"
+              onSubmit={handleSubmit}
               className="rounded-3xl border border-[#03372b]/10 bg-white/80 p-6 shadow-[0_20px_50px_-20px_rgba(3,55,43,0.18)] backdrop-blur-sm sm:p-8 lg:p-10"
             >
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
