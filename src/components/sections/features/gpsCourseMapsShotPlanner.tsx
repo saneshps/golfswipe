@@ -19,7 +19,7 @@ export default function GpsCourseMapsShotPlanner() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/40 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
         <div className="relative mx-auto flex justify-center px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
@@ -30,7 +30,7 @@ export default function GpsCourseMapsShotPlanner() {
 
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
               Tour-Level Strategy in the{" "}
-              <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
                 Palm of Your Hand
               </span>
               .
@@ -60,7 +60,7 @@ export default function GpsCourseMapsShotPlanner() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/40 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
@@ -72,14 +72,15 @@ export default function GpsCourseMapsShotPlanner() {
 
               <h3 className="text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl xl:leading-[1.15]">
                 Stunning maps for courses{" "}
-                <span className="bg-gradient-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
                   worldwide
                 </span>
               </h3>
 
               <p className="mt-5 text-base leading-relaxed text-white/75 sm:mt-6 sm:text-lg">
-              They say golf is played between the ears. To score low, you need the ultimate yardage book.
-               GolfSwipe equips you with stunning, high-resolution maps for golf courses worldwide.
+                They say golf is played between the ears. To score low, you need
+                the ultimate yardage book. GolfSwipe equips you with stunning,
+                high-resolution maps for golf courses worldwide.
               </p>
             </div>
 
@@ -90,28 +91,26 @@ export default function GpsCourseMapsShotPlanner() {
 
               <h3 className="text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl xl:leading-[1.15]">
                 Plan every hole from{" "}
-                <span className="bg-gradient-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
                   tee to green
                 </span>
               </h3>
 
               <p className="mt-5 text-base leading-relaxed text-white/75 sm:mt-6 sm:text-lg">
-              Our Tactical Shot Planner lets you plan every hole from tee to green before you even pull a club.
-               Measure exact yardages to hazards, calculate layups, and plan your ideal shot shapes dynamically on your mobile screen.
-
+                Our Tactical Shot Planner lets you plan every hole from tee to
+                green before you even pull a club. Measure exact yardages to
+                hazards, calculate layups, and plan your ideal shot shapes
+                dynamically on your mobile screen.
               </p>
 
-              <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg"> 
-
-                Whether you&apos;re playing a course for the first time or plotting a new strategy for your home track,
-                 GolfSwipe gives you the confidence to execute every shot with precision.
+              <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
+                Whether you&apos;re playing a course for the first time or
+                plotting a new strategy for your home track, GolfSwipe gives you
+                the confidence to execute every shot with precision.
               </p>
-
-             
             </div>
           </div>
-        </div> 
-
+        </div>
       </section>
     </>
   );

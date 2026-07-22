@@ -190,10 +190,10 @@ const differences = [
 ];
 
 const noMoreItems = [
-  "Sending cash or bank transfers and never hearing back", 
-  "Receiving items that don’t match the description", 
-  "Negotiating refunds or chasing payments", 
-  "Worrying about serial numbers, fakes, or damaged goods", 
+  "Sending cash or bank transfers and never hearing back",
+  "Receiving items that don’t match the description",
+  "Negotiating refunds or chasing payments",
+  "Worrying about serial numbers, fakes, or damaged goods",
 ];
 
 function SectionHeading({
@@ -324,59 +324,61 @@ export default function BuyerAndSellerProtection() {
             </span>
           </SectionHeading>
 
-          <ol className="relative mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 xl:mt-14 xl:grid-cols-4 xl:gap-5">
+          <div className="relative mt-10 sm:mt-12 xl:mt-14">
             {/* Flow line behind cards (desktop) */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute left-[6%] right-[6%] top-[52px] hidden h-px bg-linear-to-r from-transparent via-[#8cc129]/50 to-transparent xl:block"
+              className="pointer-events-none absolute left-[6%] right-[6%] top-13 hidden h-px bg-linear-to-r from-transparent via-[#8cc129]/50 to-transparent xl:block"
             />
 
-            {steps.map((item, index) => (
-              <li key={item.step} className="group relative">
-                {/* Hover glow */}
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -inset-1 rounded-[26px] bg-[#8cc129]/0 opacity-0 blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-[#8cc129]/45 group-hover:opacity-100"
-                />
-
-                <div className="relative flex h-full flex-col overflow-hidden rounded-[22px] border border-[#8cc129]/20 bg-[#f3f7eb] p-5 shadow-[0_16px_40px_-16px_rgba(0,0,0,0.45)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-2.5 group-hover:border-[#8cc129]/55 group-hover:bg-[#f7faef] group-hover:shadow-[0_28px_56px_-18px_rgba(0,0,0,0.55)] sm:p-6">
+            <ol className="relative grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-4 xl:gap-5">
+              {steps.map((item, index) => (
+                <li key={item.step} className="group relative">
+                  {/* Hover glow */}
                   <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 bg-linear-to-br from-[#8cc129]/12 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100"
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-linear-to-r from-[#8cc129] via-[#a8d63d] to-[#5a8f0f]"
+                    className="pointer-events-none absolute -inset-1 rounded-[26px] bg-[#8cc129]/0 opacity-0 blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-[#8cc129]/45 group-hover:opacity-100"
                   />
 
-                  <div className="relative mb-5 flex items-center justify-between gap-3">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-[#8cc129]/25 bg-white text-[#03372b] shadow-sm transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-hover:border-[#8cc129]/50 group-hover:bg-[#8cc129] group-hover:text-[#03372b] group-hover:shadow-[0_8px_20px_-6px_rgba(140,193,41,0.7)]">
-                      {item.icon}
+                  <div className="relative flex h-full flex-col overflow-hidden rounded-[22px] border border-[#8cc129]/20 bg-[#f3f7eb] p-5 shadow-[0_16px_40px_-16px_rgba(0,0,0,0.45)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-2.5 group-hover:border-[#8cc129]/55 group-hover:bg-[#f7faef] group-hover:shadow-[0_28px_56px_-18px_rgba(0,0,0,0.55)] sm:p-6">
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-linear-to-br from-[#8cc129]/12 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100"
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-x-0 top-0 h-0.75 bg-linear-to-r from-[#8cc129] via-[#a8d63d] to-[#5a8f0f]"
+                    />
+
+                    <div className="relative mb-5 flex items-center justify-between gap-3">
+                      <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-[#8cc129]/25 bg-white text-[#03372b] shadow-sm transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-hover:border-[#8cc129]/50 group-hover:bg-[#8cc129] group-hover:text-[#03372b] group-hover:shadow-[0_8px_20px_-6px_rgba(140,193,41,0.7)]">
+                        {item.icon}
+                      </div>
+                      <span className="rounded-full border border-[#8cc129]/25 bg-[#8cc129]/15 px-2.5 py-1 text-sm font-bold tracking-wide text-[#5a8f0f] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-[#8cc129]/50 group-hover:bg-[#8cc129]/25 group-hover:text-[#03372b]">
+                        {item.step}
+                      </span>
                     </div>
-                    <span className="rounded-full border border-[#8cc129]/25 bg-[#8cc129]/15 px-2.5 py-1 text-sm font-bold tracking-wide text-[#5a8f0f] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-[#8cc129]/50 group-hover:bg-[#8cc129]/25 group-hover:text-[#03372b]">
-                      {item.step}
-                    </span>
+
+                    <h3 className="relative text-lg font-bold leading-snug tracking-tight text-[#03372b] sm:text-xl">
+                      {item.title}
+                    </h3>
+                    <p className="relative mt-2.5 flex-1 text-sm leading-relaxed text-[#03372b]/80 sm:mt-3 sm:text-[15px]">
+                      {item.description}
+                    </p>
                   </div>
 
-                  <h3 className="relative text-lg font-bold leading-snug tracking-tight text-[#03372b] sm:text-xl">
-                    {item.title}
-                  </h3>
-                  <p className="relative mt-2.5 flex-1 text-sm leading-relaxed text-[#03372b]/80 sm:mt-3 sm:text-[15px]">
-                    {item.description}
-                  </p>
-                </div>
-
-                {index < steps.length - 1 && (
-                  <span
-                    aria-hidden="true"
-                    className="absolute -right-3 top-[46px] z-10 hidden h-6 w-6 items-center justify-center rounded-full border border-[#8cc129]/40 bg-[#03372b] text-sm font-semibold text-[#8cc129] shadow-[0_0_12px_rgba(140,193,41,0.35)] xl:flex"
-                  >
-                    →
-                  </span>
-                )}
-              </li>
-            ))}
-          </ol>
+                  {index < steps.length - 1 && (
+                    <span
+                      aria-hidden="true"
+                      className="absolute -right-3 top-11.5 z-10 hidden h-6 w-6 items-center justify-center rounded-full border border-[#8cc129]/40 bg-[#03372b] text-sm font-semibold text-[#8cc129] shadow-[0_0_12px_rgba(140,193,41,0.35)] xl:flex"
+                    >
+                      →
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
@@ -484,12 +486,12 @@ export default function BuyerAndSellerProtection() {
 
               <p className="mt-4 max-w-md text-base leading-relaxed text-white/75 sm:mt-5 sm:text-lg">
                 Leave the risky, messy side of peer-to-peer trading behind.
-              </p> 
+              </p>
             </div>
 
             <ul className="space-y-3 sm:space-y-3.5">
-              {noMoreItems.map((item) => (
-                <li key={item} className="group relative">
+              {noMoreItems.map((item, index) => (
+                <li key={`${index}-${item}`} className="group relative">
                   <div
                     aria-hidden="true"
                     className="pointer-events-none absolute -inset-0.5 rounded-[18px] bg-[#8cc129]/0 opacity-0 blur-lg transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-[#8cc129]/35 group-hover:opacity-100"
@@ -541,7 +543,7 @@ export default function BuyerAndSellerProtection() {
         />
 
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-24 xl:w-[90%] 2xl:w-[85%]">
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-[#8cc129]/20 bg-[#03372b] px-6 py-12 text-center shadow-[0_28px_60px_-24px_rgba(3,55,43,0.55)] sm:rounded-[32px] sm:px-10 sm:py-14 md:px-14 md:py-16">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-[#8cc129]/20 bg-[#03372b] px-6 py-12 text-center shadow-[0_28px_60px_-24px_rgba(3,55,43,0.55)] sm:rounded-4xl sm:px-10 sm:py-14 md:px-14 md:py-16">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(140,193,41,0.22),transparent_62%)]"

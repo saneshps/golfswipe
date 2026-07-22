@@ -11,7 +11,7 @@ const topics = [
 export default function ClubhouseForum() {
   return (
     <>
-      <section className="relative w-full overflow-hidden bg-[#fff]">
+      <section className="relative w-full overflow-hidden bg-white">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(140,193,41,0.18),transparent_55%)]"
@@ -26,7 +26,7 @@ export default function ClubhouseForum() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/40 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
@@ -37,7 +37,7 @@ export default function ClubhouseForum() {
 
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#000000] sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
               Where Golf{" "}
-              <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
                 Never Stops
               </span>
               .
@@ -55,15 +55,15 @@ export default function ClubhouseForum() {
               <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-none">
                 <div
                   aria-hidden="true"
-                  className="absolute inset-4 rounded-[2rem] bg-[#8cc129]/25 blur-3xl sm:inset-6"
+                  className="absolute inset-4 rounded-4xl bg-[#8cc129]/25 blur-3xl sm:inset-6"
                 />
                 <div
                   aria-hidden="true"
                   className="absolute -inset-2 rounded-[2.5rem] border border-[#03372b]/10 sm:-inset-3"
                 />
 
-                <div className="relative overflow-hidden rounded-[2rem] border border-[#03372b]/10 bg-white shadow-[0_20px_50px_-12px_rgba(3,55,43,0.15)] sm:rounded-[1.5rem]">
-                  <div className="relative h-[420px] w-full sm:h-[500px]">
+                <div className="relative overflow-hidden rounded-4xl border border-[#03372b]/10 bg-white shadow-[0_20px_50px_-12px_rgba(3,55,43,0.15)] sm:rounded-3xl">
+                  <div className="relative h-105 w-full sm:h-125">
                     <Image
                       src="/asset/img/clubhouse.webp"
                       alt="GolfSwipe app — The Clubhouse discussion forum"
@@ -111,7 +111,7 @@ export default function ClubhouseForum() {
                 {topics.map((topic) => (
                   <span
                     key={topic}
-                    className="inline-flex items-center rounded-full border border-[#03372b]/12 bg-[#03372b]/[0.04] px-3 py-1.5 text-xs font-medium text-[#03372b]/80 sm:px-3.5 sm:text-sm"
+                    className="inline-flex items-center rounded-full border border-[#03372b]/12 bg-[#03372b]/4 px-3 py-1.5 text-xs font-medium text-[#03372b]/80 sm:px-3.5 sm:text-sm"
                   >
                     {topic}
                   </span>
@@ -133,16 +133,16 @@ export default function ClubhouseForum() {
               />
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/45 to-transparent"
+                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/45 to-transparent"
               />
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/20 to-transparent"
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/20 to-transparent"
               />
 
               <p className="relative mx-auto max-w-2xl text-base font-bold leading-snug tracking-tight text-white sm:text-lg md:text-xl lg:text-2xl xl:text-3xl xl:leading-tight">
                 Live the game{" "}
-                <span className="bg-gradient-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
                   24/7
                 </span>{" "}
                 — right inside GolfSwipe.

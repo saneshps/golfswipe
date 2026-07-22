@@ -1,11 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-
-const destinations = [
-  { name: "St Andrews", region: "Scotland" },
-  { name: "Pebble Beach", region: "California" },
-  { name: "Augusta", region: "Georgia" },
-];
 
 export default function GolfTravelHub() {
   return (
@@ -26,7 +19,7 @@ export default function GolfTravelHub() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/40 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
         <div className="relative mx-auto flex justify-center px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
@@ -37,7 +30,7 @@ export default function GolfTravelHub() {
 
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
               Your next great round is just a{" "}
-              <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
                 swipe away
               </span>
             </h2>
@@ -66,7 +59,7 @@ export default function GolfTravelHub() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/40 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
@@ -75,14 +68,14 @@ export default function GolfTravelHub() {
               <div className="relative w-full">
                 <div
                   aria-hidden="true"
-                  className="absolute inset-4 rounded-[2rem] bg-[#8cc129]/40 blur-3xl sm:inset-6"
+                  className="absolute inset-4 rounded-4xl bg-[#8cc129]/40 blur-3xl sm:inset-6"
                 />
                 <div
                   aria-hidden="true"
                   className="absolute -inset-3 rounded-[2.5rem] bg-[#8cc129]/20 blur-[60px] sm:-inset-4"
                 />
 
-                <div className="relative overflow-hidden rounded-[2rem] border border-[#8cc129]/35 shadow-[0_0_40px_rgba(140,193,41,0.35),0_0_80px_rgba(140,193,41,0.18),0_24px_60px_-20px_rgba(0,0,0,0.55)] ring-1 ring-[#8cc129]/25 sm:rounded-[2.5rem]">
+                <div className="relative overflow-hidden rounded-4xl border border-[#8cc129]/35 shadow-[0_0_40px_rgba(140,193,41,0.35),0_0_80px_rgba(140,193,41,0.18),0_24px_60px_-20px_rgba(0,0,0,0.55)] ring-1 ring-[#8cc129]/25 sm:rounded-[2.5rem]">
                   <Image
                     src="/asset/img/weekend-trip.webp"
                     alt="GolfSwipe app — swipe to discover and book golf tee times"
@@ -111,7 +104,7 @@ export default function GolfTravelHub() {
 
               <h3 className="text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl xl:leading-[1.15]">
                 Live tee times, multi-round breaks &amp;{" "}
-                <span className="bg-gradient-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
                   golf-and-stay packages
                 </span>
               </h3>
@@ -161,7 +154,7 @@ export default function GolfTravelHub() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#03372b]/15 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#03372b]/15 to-transparent"
         />
 
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
@@ -173,7 +166,7 @@ export default function GolfTravelHub() {
 
               <h3 className="text-2xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-3xl lg:text-4xl xl:leading-[1.15]">
                 Turn every trip into{" "}
-                <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
                   unforgettable golf
                 </span>
               </h3>
@@ -184,26 +177,24 @@ export default function GolfTravelHub() {
                 journey into unforgettable golf.
               </p>
               <p className="mt-2 text-base leading-relaxed text-zinc-600 sm:mt-6 sm:text-lg">
-              And if you are travelling and booking alone, use the GolfSwipe interactive
-               map and pin to let other golfers join your round, all in the one app! 
-
+                And if you are travelling and booking alone, use the GolfSwipe
+                interactive map and pin to let other golfers join your round,
+                all in the one app!
               </p>
-
-             
             </div>
 
             <div className="relative z-10 flex w-full justify-center lg:flex-1 lg:justify-end">
               <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl">
                 <div
                   aria-hidden="true"
-                  className="absolute inset-4 rounded-[2rem] bg-[#8cc129]/25 blur-3xl sm:inset-6"
+                  className="absolute inset-4 rounded-4xl bg-[#8cc129]/25 blur-3xl sm:inset-6"
                 />
                 <div
                   aria-hidden="true"
                   className="absolute -inset-2 rounded-[2.5rem] border border-[#03372b]/10 sm:-inset-3"
                 />
 
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-[0_24px_60px_-20px_rgba(3,55,43,0.35)] sm:aspect-[5/6] lg:aspect-[4/3]">
+                <div className="relative aspect-4/5 w-full overflow-hidden rounded-3xl shadow-[0_24px_60px_-20px_rgba(3,55,43,0.35)] sm:aspect-5/6 lg:aspect-4/3">
                   <Image
                     src="/asset/img/unforgettable.webp"
                     alt="Friends enjoying a round together on a golf course"
@@ -213,7 +204,7 @@ export default function GolfTravelHub() {
                   />
                   <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-t from-[#03372b]/40 via-transparent to-transparent"
+                    className="absolute inset-0 bg-linear-to-t from-[#03372b]/40 via-transparent to-transparent"
                   />
                 </div>
 
@@ -226,8 +217,6 @@ export default function GolfTravelHub() {
           </div>
         </div>
       </section>
-
-    
     </>
   );
 }

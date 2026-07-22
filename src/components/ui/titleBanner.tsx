@@ -20,7 +20,7 @@ export default function TitleBanner({
   imageAlt = "",
 }: TitleBannerProps) {
   return (
-    <section className="relative h-[180px] w-full overflow-hidden sm:h-[220px] md:h-[250px]">
+    <section className="relative h-45 w-full overflow-hidden sm:h-55 md:h-62.5">
       <Image
         src={imageSrc}
         alt={imageAlt}
@@ -32,8 +32,8 @@ export default function TitleBanner({
         aria-hidden={imageAlt ? undefined : true}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#03372b]/90 via-[#03372b]/70 to-[#03372b]/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10" />
+      <div className="absolute inset-0 bg-linear-to-r from-[#03372b]/90 via-[#03372b]/70 to-[#03372b]/40" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-black/10" />
 
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full px-4 sm:px-6 md:w-[90%] lg:w-[90%] lg:px-8 xl:w-[90%] 2xl:w-[85%]">
@@ -64,7 +64,7 @@ export default function TitleBanner({
                       <span
                         className={
                           isLast
-                            ? " text-white"
+                            ? "text-white"
                             : "text-[#8cc129]"
                         }
                         aria-current={isLast ? "page" : undefined}
