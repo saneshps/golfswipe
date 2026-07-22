@@ -145,16 +145,16 @@ function BenefitCard({
   item: (typeof benefits)[number];
 }) {
   return (
-    <article className="relative z-10 rounded-[20px] bg-white p-5 shadow-[0_8px_30px_-12px_rgba(3,55,43,0.08)]">
-      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-[#03372b]/10 bg-[#8cc129]/10 text-[#03372b] sm:mb-5 sm:h-14 sm:w-14">
+    <article className="relative z-10 rounded-[20px] bg-[#03372b] p-5 shadow-[0_8px_30px_-12px_rgba(3,55,43,0.35)]">
+      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-[#8cc129]/15 text-[#8cc129] sm:mb-5 sm:h-14 sm:w-14">
         {item.icon}
       </div>
 
-      <h3 className="text-2xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-3xl xl:leading-[1.15]">
+      <h3 className="text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl xl:leading-[1.15]">
         {item.title}
       </h3>
 
-      <ul className="mt-4 space-y-1.5 text-base leading-relaxed text-[#03372b]/70 sm:mt-5 sm:text-lg">
+      <ul className="mt-4 space-y-1.5 text-base leading-relaxed text-white/70 sm:mt-5 sm:text-lg">
         {item.content.map((line) => (
           <li key={line} className="flex items-start gap-2">
             <span aria-hidden="true" className="mt-0 shrink-0 text-[#8cc129]">

@@ -43,8 +43,7 @@ export default function MarketplacePricing() {
             </h2>
 
             <p className="mt-5 text-base leading-relaxed text-white/75 sm:mt-6 sm:text-lg">
-              Put as much golf equipment you want on the app and trade globally
-              at no cost.
+            List as many items as you like on our marketplace for no cost in your first month
             </p>
 
             <div className="mt-8 space-y-5 sm:mt-10">
