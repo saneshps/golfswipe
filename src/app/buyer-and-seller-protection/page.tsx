@@ -1,6 +1,6 @@
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import BuyerAndSellerProtection from "@/components/sections/features/buyer-and-seller-protection";
+import BuyerAndSellerProtection from "@/components/sections/buyer-and-seller-protection/buyer-and-seller-protection";
 import TitleBanner from "@/components/ui/titleBanner";
 
 export default function BuyerAndSellerProtectionPage() {

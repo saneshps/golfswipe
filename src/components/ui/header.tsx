@@ -15,6 +15,7 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Marketplace", href: "/marketplace" },
+  { label: "Buyer and Seller Protection", href: "/buyer-and-seller-protection" },
   { label: "Pricing", href: "/pricing" },
   {
     label: "Features",
@@ -33,8 +34,7 @@ const navLinks: NavLink[] = [
       { label: "Bi-Weekly Rules Quiz", href: "/bi-weekly-rules-quiz" },
       { label: "The Clubhouse Forum", href: "/clubhouse-forum" },
       { label: "Golf Jobs Board", href: "/golf-jobs-board" },
-      { label: "Weather Updates", href: "/weather-updates" },
-      { label: "Buyer and Seller Protection", href: "/buyer-and-seller-protection" },
+      { label: "Weather Updates", href: "/weather-updates" }, 
     ],
   },
   { label: "Contact Us", href: "/contact-us" },
