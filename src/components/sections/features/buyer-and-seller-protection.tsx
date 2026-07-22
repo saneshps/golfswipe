@@ -522,11 +522,79 @@ export default function BuyerAndSellerProtection() {
             We’re the only global, golf‑first marketplace that combines trusted escrow and secure trading — all in one place.
             </p>
 
-            <p className="mx-auto mt-6 text-base font-semibold tracking-tight text-[#8cc129] sm:mt-8 sm:text-lg">
-            <span> Trade safely.   </span>  
-            <span> Trade smart.  </span>   
-            <span>  Trade with GolfSwipe Escrow.  </span>   
-            </p>
+            <div className="mx-auto mt-8 max-w-2xl sm:mt-10">
+              <div
+                aria-hidden="true"
+                className="mx-auto mb-6 h-px w-16 bg-linear-to-r from-transparent via-[#8cc129]/70 to-transparent sm:mb-8 sm:w-24"
+              />
+
+              <p className="flex flex-col items-center gap-3 sm:gap-4 md:flex-row md:flex-wrap md:justify-center md:gap-x-0 md:gap-y-3">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white/90 sm:text-base">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#8cc129]/35 bg-[#8cc129]/15 text-[#8cc129]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-3.5 w-3.5"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </span>
+                  Trade safely
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="hidden h-1 w-1 rounded-full bg-[#8cc129]/60 md:mx-4 md:inline-block"
+                />
+
+                <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white/90 sm:text-base">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#8cc129]/35 bg-[#8cc129]/15 text-[#8cc129]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-3.5 w-3.5"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4L7.5 16.7l.9-5L4.8 8.2l5-.7L12 3z" />
+                    </svg>
+                  </span>
+                  Trade smart
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="hidden h-1 w-1 rounded-full bg-[#8cc129]/60 md:mx-4 md:inline-block"
+                />
+
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#8cc129]/40 bg-[#8cc129]/15 px-3.5 py-1.5 text-sm font-bold tracking-wide text-[#8cc129] sm:px-4 sm:py-2 sm:text-base">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#8cc129]/25">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-3.5 w-3.5"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="11" width="18" height="10" rx="2" />
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                  </span>
+                  Trade with GolfSwipe Escrow
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
