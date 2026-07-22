@@ -379,7 +379,7 @@ export default function Header() {
               alt="Golf Swipe"
               width={120}
               height={28}
-              className="h-9 w-auto"
+              className="h-7 w-auto filter brightness-0 invert"
             />
           </Link>
           <button
