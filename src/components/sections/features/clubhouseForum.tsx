@@ -107,15 +107,43 @@ export default function ClubhouseForum() {
                 the game 24/7.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-2 sm:mt-10 sm:gap-2.5">
-                {topics.map((topic) => (
-                  <span
-                    key={topic}
-                    className="inline-flex items-center rounded-full border border-[#03372b]/12 bg-[#03372b]/4 px-3 py-1.5 text-xs font-medium text-[#03372b]/80 sm:px-3.5 sm:text-sm"
-                  >
-                    {topic}
-                  </span>
-                ))}
+              <div className="mt-8 sm:mt-10">
+                <div className="relative overflow-hidden rounded-2xl border border-[#03372b]/10 bg-[#03372b] p-1 shadow-[0_20px_40px_-18px_rgba(3,55,43,0.45)] sm:rounded-3xl sm:p-1.5">
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -right-10 top-0 h-32 w-32 rounded-full bg-[#8cc129]/25 blur-3xl"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/50 to-transparent"
+                  />
+
+                  <ul className="relative grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-1.5">
+                    {topics.map((topic, index) => (
+                      <li
+                        key={topic}
+                        className={`group relative overflow-hidden rounded-xl border border-white/5 bg-white/5 transition duration-300 hover:border-[#8cc129]/35 hover:bg-[#8cc129]/15 sm:rounded-2xl ${
+                          index === topics.length - 1 && topics.length % 2 !== 0
+                            ? "sm:col-span-2"
+                            : ""
+                        }`}
+                      >
+                        <div className="flex items-center gap-3 px-3.5 py-3 sm:gap-3.5 sm:px-4 sm:py-3.5">
+                          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-[#8cc129] to-[#5a8f0f] text-xs font-bold text-[#03372b] shadow-[0_6px_14px_-4px_rgba(140,193,41,0.55)] transition duration-300 group-hover:scale-105 sm:h-9 sm:w-9 sm:rounded-xl sm:text-sm">
+                            {String(index + 1).padStart(2, "0")}
+                          </span>
+                          <span className="min-w-0 text-sm font-semibold tracking-wide text-white/90 transition duration-300 group-hover:text-white sm:text-[0.95rem]">
+                            {topic}
+                          </span>
+                          <span
+                            aria-hidden="true"
+                            className="ml-auto h-1.5 w-1.5 shrink-0 rounded-full bg-[#8cc129]/50 opacity-0 transition duration-300 group-hover:opacity-100"
+                          />
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
