@@ -171,6 +171,19 @@ export default function Header() {
             className="shrink-0 transition-opacity hover:opacity-80"
             onClick={closeMenu}
           >
+            {/* Mobile header logo — below 1080px */}
+            <Image
+              src="/asset/img/mobile-golf-swipe-logo.webp"
+              alt="Golf Swipe"
+              width={180}
+              height={48}
+              loading="eager"
+              fetchPriority="high"
+              className={`w-auto min-[1080px]:hidden transition-[height,width] duration-300 ease-out ${
+                scrolled ? "h-12 sm:h-9" : "h-14 sm:h-12"
+              }`}
+            />
+            {/* Desktop header logo — 1080px and up */}
             <Image
               src="/asset/img/golf-swipe-logo.png"
               alt="Golf Swipe"
@@ -178,10 +191,8 @@ export default function Header() {
               height={48}
               loading="eager"
               fetchPriority="high"
-              className={`w-auto transition-[height,width] duration-300 ease-out ${
-                scrolled
-                  ? "h-12 sm:h-9 lg:h-15"
-                  : "h-14 sm:h-12 lg:h-14 xl:h-22"
+              className={`hidden w-auto min-[1080px]:block transition-[height,width] duration-300 ease-out ${
+                scrolled ? "h-15" : "h-14 xl:h-22"
               }`}
             />
           </Link>
@@ -364,11 +375,11 @@ export default function Header() {
         <div className="flex h-14 shrink-0 items-center justify-between border-b border-white/15 px-4 sm:h-16 sm:px-6">
           <Link href="/" onClick={closeMenu}>
             <Image
-              src="/asset/img/golf-swipe-logo.png"
+              src="/asset/img/mobile-golf-swipe-logo.webp"
               alt="Golf Swipe"
               width={120}
               height={28}
-              className="h-9 w-auto brightness-0 invert"
+              className="h-9 w-auto"
             />
           </Link>
           <button
