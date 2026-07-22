@@ -180,7 +180,7 @@ export default function Header() {
               loading="eager"
               fetchPriority="high"
               className={`w-auto min-[1080px]:hidden transition-[height,width] duration-300 ease-out ${
-                scrolled ? "h-12 sm:h-9" : "h-14 sm:h-12"
+                scrolled ? "h-7 sm:h-9" : "h-9 sm:h-12"
               }`}
             />
             {/* Desktop header logo — 1080px and up */}
