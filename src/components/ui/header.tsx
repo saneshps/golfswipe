@@ -105,7 +105,7 @@ export default function Header() {
 
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 767) {
+      if (window.innerWidth >= 1080) {
         setMenuOpen(false);
         setMobileFeaturesOpen(false);
       }
@@ -186,9 +186,9 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop / tablet navigation — full menu from 767px up */}
+          {/* Desktop navigation — full menu from 1080px up */}
           <nav
-            className="hidden min-[767px]:flex flex-1 items-center justify-end gap-2 min-[767px]:gap-3"
+            className="hidden min-[1080px]:flex flex-1 items-center justify-end gap-2 min-[1080px]:gap-3"
             aria-label="Main navigation"
           >
             <ul className="flex flex-wrap items-center justify-end gap-x-0.5 gap-y-1">
@@ -306,10 +306,10 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Hamburger — below 767px only */}
+          {/* Hamburger — below 1080px only */}
           <button
             type="button"
-            className={`flex shrink-0 items-center justify-center rounded-lg border border-[#03372b] bg-[#03372b] text-white transition-all duration-300 hover:bg-[#024a3a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#03372b] focus-visible:ring-offset-2 min-[767px]:hidden ${
+            className={`flex shrink-0 items-center justify-center rounded-lg border border-[#03372b] bg-[#03372b] text-white transition-all duration-300 hover:bg-[#024a3a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#03372b] focus-visible:ring-offset-2 min-[1080px]:hidden ${
               scrolled ? "h-9 w-9" : "h-10 w-10"
             }`}
             aria-expanded={menuOpen}
@@ -341,9 +341,9 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile overlay — below 767px only */}
+      {/* Mobile overlay — below 1080px only */}
       <div
-        className={`fixed inset-0 z-60 bg-black/50 backdrop-blur-sm transition-opacity duration-300 min-[767px]:hidden ${
+        className={`fixed inset-0 z-60 bg-black/50 backdrop-blur-sm transition-opacity duration-300 min-[1080px]:hidden ${
           menuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -352,10 +352,10 @@ export default function Header() {
         onClick={closeMenu}
       />
 
-      {/* Mobile menu panel — below 767px only */}
+      {/* Mobile menu panel — below 1080px only */}
       <nav
         id="mobile-nav"
-        className={`fixed right-0 top-0 z-70 flex h-dvh w-[min(100vw,20rem)] flex-col bg-[#001e17] text-white shadow-2xl transition-transform duration-300 ease-in-out min-[767px]:hidden ${
+        className={`fixed right-0 top-0 z-70 flex h-dvh w-[min(100vw,20rem)] flex-col bg-[#001e17] text-white shadow-2xl transition-transform duration-300 ease-in-out min-[1080px]:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         aria-label="Mobile navigation"
