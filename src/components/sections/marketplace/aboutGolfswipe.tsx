@@ -25,9 +25,9 @@ export default function AboutGolfswipe() {
             </span>
 
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
-            The worlds fastest growing{" "}
-              <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
-              borderless golf marketplace
+              The worlds fastest growing{" "}
+              <span className="bg-linear-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
+                borderless golf marketplace
               </span>
             </h2>
 
@@ -67,14 +67,14 @@ export default function AboutGolfswipe() {
             <div className="relative -mx-4 w-[calc(100%+2rem)] max-w-none sm:mx-0 sm:w-full sm:max-w-lg lg:max-w-xl xl:max-w-2xl">
               <div
                 aria-hidden="true"
-                className="absolute inset-4 rounded-none bg-[#8cc129]/25 blur-3xl sm:rounded-[2rem] sm:inset-6"
+                className="absolute inset-4 rounded-none bg-[#8cc129]/25 blur-3xl sm:inset-6 sm:rounded-4xl"
               />
               <div
                 aria-hidden="true"
                 className="absolute -inset-2 rounded-none border border-[#03372b]/10 sm:-inset-3 sm:rounded-[2.5rem]"
               />
 
-              <div className="relative aspect-[912/950] w-full overflow-hidden rounded-none shadow-[0_24px_60px_-20px_rgba(3,55,43,0.35)] sm:rounded-3xl lg:aspect-square">
+              <div className="relative aspect-912/950 w-full overflow-hidden rounded-none shadow-[0_24px_60px_-20px_rgba(3,55,43,0.35)] sm:rounded-3xl lg:aspect-square">
                 <Image
                   src="/asset/img/marketplace-mobile.webp"
                   alt="GolfSwipe marketplace — browse and trade golf gear with confidence"
@@ -84,7 +84,7 @@ export default function AboutGolfswipe() {
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 hidden bg-gradient-to-t from-[#03372b]/40 via-transparent to-[#8cc129]/10 lg:block"
+                  className="absolute inset-0 hidden bg-linear-to-t from-[#03372b]/40 via-transparent to-[#8cc129]/10 lg:block"
                 />
               </div>
 

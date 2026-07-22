@@ -89,7 +89,7 @@ export default function Whychoose() {
       {/* Soft green atmosphere */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-400/40 to-transparent"
       />
       <div
         aria-hidden="true"
@@ -109,7 +109,7 @@ export default function Whychoose() {
 
           <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-[2.75rem]">
             Why{" "}
-            <span className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-emerald-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">
               GolfSwipe?
             </span>
           </h2>
@@ -129,7 +129,7 @@ export default function Whychoose() {
             >
               <div
                 aria-hidden="true"
-                className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-emerald-500 to-teal-400 transition-transform duration-500 group-hover:scale-x-100"
+                className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-linear-to-r from-emerald-500 to-teal-400 transition-transform duration-500 group-hover:scale-x-100"
               />
 
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100 transition-all duration-300 group-hover:scale-105 group-hover:bg-emerald-600 group-hover:text-white group-hover:ring-emerald-600 sm:mb-6 sm:h-14 sm:w-14">

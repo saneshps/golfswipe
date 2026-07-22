@@ -10,7 +10,7 @@ export default function About() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-emerald-400/15 blur-[120px] sm:h-[28rem] sm:w-[28rem]"
+        className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-emerald-400/15 blur-[120px] sm:h-112 sm:w-md"
       />
       <div
         aria-hidden="true"
@@ -27,7 +27,7 @@ export default function About() {
 
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
               Stop jumping between{" "}
-              <span className="bg-gradient-to-r from-emerald-300 via-emerald-400 to-teal-300 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(52,211,153,0.35)]">
+              <span className="bg-linear-to-r from-emerald-300 via-emerald-400 to-teal-300 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(52,211,153,0.35)]">
                 clunky forums, sketchy marketplaces,
               </span>{" "}
               and social media meet up groups.
@@ -48,14 +48,14 @@ export default function About() {
               {/* Image glow halo */}
               <div
                 aria-hidden="true"
-                className="absolute inset-6 rounded-[2rem] blur-3xl sm:inset-8"
+                className="absolute inset-6 rounded-4xl blur-3xl sm:inset-8"
               />
               <div
                 aria-hidden="true"
                 className="absolute -inset-2 rounded-[2.5rem] border sm:-inset-3"
               />
 
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border ring-1 sm:aspect-[5/6] lg:aspect-square">
+              <div className="relative aspect-4/5 w-full overflow-hidden rounded-3xl border ring-1 sm:aspect-5/6 lg:aspect-square">
                 <Image
                   src="/asset/img/player.webp"
                   alt="Golfer on the course at golden hour"
@@ -67,7 +67,7 @@ export default function About() {
                 {/* Soft vignette overlay */}
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-emerald-900/10"
+                  className="absolute inset-0 bg-linear-to-t from-zinc-950/60 via-transparent to-emerald-900/10"
                 />
               </div>
 

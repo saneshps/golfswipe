@@ -24,7 +24,7 @@ export default function MarketplacePricing() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/40 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
       />
 
       <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
@@ -37,7 +37,7 @@ export default function MarketplacePricing() {
 
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.75rem] xl:text-5xl xl:leading-[1.15]">
               Enjoy your first month{" "}
-              <span className="bg-gradient-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
                 completely FREE!
               </span>
             </h2>
@@ -55,7 +55,7 @@ export default function MarketplacePricing() {
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm sm:p-6">
                 <div
                   aria-hidden="true"
-                  className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#8cc129] to-[#8cc129]/30"
+                  className="absolute left-0 top-0 h-full w-1 bg-linear-to-b from-[#8cc129] to-[#8cc129]/30"
                 />
                 <p className="pl-3 text-lg font-semibold leading-snug text-white sm:pl-4 sm:text-xl">
                   Flexible, Value-Tiered Listing Fees
@@ -104,7 +104,7 @@ export default function MarketplacePricing() {
               </ul>
             </div>
 
-            <div className="relative mt-5 overflow-hidden rounded-2xl border border-[#8cc129]/35 bg-gradient-to-br from-[#8cc129]/20 via-[#8cc129]/10 to-transparent p-5 sm:mt-6 sm:rounded-3xl sm:p-6">
+            <div className="relative mt-5 overflow-hidden rounded-2xl border border-[#8cc129]/35 bg-linear-to-br from-[#8cc129]/20 via-[#8cc129]/10 to-transparent p-5 sm:mt-6 sm:rounded-3xl sm:p-6">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-[#8cc129]/25 blur-2xl"

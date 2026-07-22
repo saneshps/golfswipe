@@ -98,7 +98,7 @@ function BackToTopButton() {
       type="button"
       onClick={scrollToTop}
       aria-label="Back to top"
-      className={`group fixed bottom-6 left-4 z-40 flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-emerald-400/30 bg-gradient-to-br from-emerald-600 via-emerald-700 to-[#03372b] text-white shadow-[0_8px_30px_rgba(5,46,22,0.45)] transition-all duration-500 ease-out sm:bottom-8 sm:left-6 sm:h-14 sm:w-14 ${
+      className={`group fixed bottom-6 left-4 z-40 flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-emerald-400/30 bg-linear-to-br from-emerald-600 via-emerald-700 to-[#03372b] text-white shadow-[0_8px_30px_rgba(5,46,22,0.45)] transition-all duration-500 ease-out sm:bottom-8 sm:left-6 sm:h-14 sm:w-14 ${
         visible
           ? "pointer-events-auto translate-y-0 scale-100 opacity-100"
           : "pointer-events-none translate-y-4 scale-90 opacity-0"
@@ -141,7 +141,7 @@ export default function Footer() {
     <>
       <footer className="relative mt-auto w-full overflow-hidden border-t border-emerald-500/10 bg-zinc-950 text-zinc-300">
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-950/90 via-zinc-950 to-zinc-950"
+          className="pointer-events-none absolute inset-0 bg-linear-to-br from-emerald-950/90 via-zinc-950 to-zinc-950"
           aria-hidden="true"
         />
         <div
@@ -188,7 +188,7 @@ export default function Footer() {
                   alt="Golf Swipe"
                   width={180}
                   height={42}
-                  className="h-14 w-auto brightness-0 invert will-change-transform animate-logo motion-reduce:animate-none transition-opacity duration-300 group-hover:opacity-90 sm:h-16 lg:h-[4.5rem]"
+                  className="h-14 w-auto brightness-0 invert will-change-transform animate-logo motion-reduce:animate-none transition-opacity duration-300 group-hover:opacity-90 sm:h-16 lg:h-18"
                 />
               </Link>
               <p className="max-w-[16rem] text-sm leading-relaxed text-zinc-400">
