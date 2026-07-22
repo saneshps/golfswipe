@@ -30,9 +30,9 @@ export default function Form() {
             Get in touch
           </span>
           <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#03372b] sm:text-4xl lg:text-[2.75rem]">
-          Get in Touch {" "}
-            <span className="bg-gradient-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
-            With Us
+            Get in Touch{" "}
+            <span className="bg-linear-to-r from-[#03372b] via-[#054e3d] to-[#8cc129] bg-clip-text text-transparent">
+              With Us
             </span>
           </h2>
           <p className="mt-4 text-base leading-relaxed text-zinc-600 sm:text-lg">
@@ -134,7 +134,7 @@ export default function Form() {
                     rows={5}
                     required
                     placeholder="Tell us a little more about your enquiry..."
-                    className={`${inputClass} min-h-[8.5rem] resize-y`}
+                    className={`${inputClass} min-h-34 resize-y`}
                   />
                 </div>
               </div>
@@ -142,7 +142,7 @@ export default function Form() {
               <div className="mt-7 sm:mt-8">
                 <button
                   type="submit"
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#03372b] px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#054e3d] hover:shadow-lg hover:shadow-[#03372b]/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8cc129] focus-visible:ring-offset-2 sm:w-auto sm:min-w-[12rem]"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#03372b] px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#054e3d] hover:shadow-lg hover:shadow-[#03372b]/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8cc129] focus-visible:ring-offset-2 sm:w-auto sm:min-w-48"
                 >
                   Send message
                   <svg
@@ -177,7 +177,7 @@ export default function Form() {
               />
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8cc129]/50 to-transparent"
+                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/50 to-transparent"
               />
 
               <div className="relative flex flex-1 flex-col">
@@ -219,7 +219,7 @@ export default function Form() {
                           href="mailto:info@golfswipe.golf"
                           className="mt-1 block break-all text-base font-semibold text-white transition-colors hover:text-[#8cc129] sm:text-lg"
                         >
-                         info@golfswipe.golf
+                          info@golfswipe.golf
                         </Link>
                       </div>
                     </div>
@@ -252,7 +252,6 @@ export default function Form() {
                         </p>
                         <p className="mt-0.5 text-sm text-white/65 sm:text-base">
                           9:00 AM – 5:00 PM (UK Time)
-                          
                         </p>
                         <p className="mt-2 text-sm text-white/50">
                           Closed weekends &amp; public holidays
