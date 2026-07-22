@@ -522,44 +522,69 @@ export default function BuyerAndSellerProtection() {
       </section>
 
       {/* Only GolfSwipe */}
-      <section className="relative w-full overflow-hidden bg-[#03372b]">
+      <section className="relative w-full overflow-hidden bg-light-gray">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(140,193,41,0.18),transparent_60%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(140,193,41,0.14),transparent_55%)]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -left-20 top-0 h-72 w-72 rounded-full bg-[#8cc129]/20 blur-[120px]"
+          className="pointer-events-none absolute -left-20 top-1/4 h-72 w-72 rounded-full bg-[#8cc129]/15 blur-[120px]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-[#8cc129]/10 blur-[100px]"
+          className="pointer-events-none absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-[#03372b]/5 blur-[100px]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-24 xl:w-[90%] 2xl:w-[85%]">
-          <div className="relative z-10 mx-auto max-w-3xl text-center">
-       
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-[#8cc129]/20 bg-[#03372b] px-6 py-12 text-center shadow-[0_28px_60px_-24px_rgba(3,55,43,0.55)] sm:rounded-[32px] sm:px-10 sm:py-14 md:px-14 md:py-16">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(140,193,41,0.22),transparent_62%)]"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.05),transparent_50%)]"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/50 to-transparent"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/25 to-transparent"
+            />
 
-            <h2 className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.5rem] xl:leading-[1.15]">
-            Only GolfSwipe{" "}
-              <span className="bg-linear-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
-              Does This
-              </span>
-            </h2>
+            <div className="relative z-10">
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#8cc129]/30 bg-[#8cc129]/15 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-[#8cc129] sm:mb-6 sm:text-sm">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#8cc129]" />
+                Secure Escrow
+              </div>
 
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70 sm:mt-6 sm:text-lg">
-            We’re the only global, golf‑first marketplace that combines trusted escrow and secure trading — all in one place.
-            </p>
+              <h2 className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.5rem] xl:leading-[1.15]">
+                Only GolfSwipe{" "}
+                <span className="bg-linear-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
+                  Does This
+                </span>
+              </h2>
 
-            <div className="mx-auto mt-8 max-w-2xl sm:mt-10">
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/75 sm:mt-6 sm:text-lg">
+                We’re the only global, golf‑first marketplace that combines
+                trusted escrow and secure trading — all in one place.
+              </p>
+
               <div
                 aria-hidden="true"
-                className="mx-auto mb-6 h-px w-16 bg-linear-to-r from-transparent via-[#8cc129]/70 to-transparent sm:mb-8 sm:w-24"
+                className="mx-auto mt-8 h-px w-16 bg-linear-to-r from-transparent via-[#8cc129]/70 to-transparent sm:mt-10 sm:w-24"
               />
 
-              <p className="flex flex-col items-center gap-3 sm:gap-4 md:flex-row md:flex-wrap md:justify-center md:gap-x-0 md:gap-y-3">
-                <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white/90 sm:text-base">
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#8cc129]/35 bg-[#8cc129]/15 text-[#8cc129]">
+              <ul className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3.5">
+                <li className="inline-flex items-center justify-center gap-2.5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold tracking-wide text-white/95 backdrop-blur-sm transition-colors duration-300 hover:border-[#8cc129]/40 hover:bg-[#8cc129]/10 sm:text-base">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#8cc129]/35 bg-[#8cc129]/15 text-[#8cc129]">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -574,15 +599,10 @@ export default function BuyerAndSellerProtection() {
                     </svg>
                   </span>
                   Trade safely
-                </span>
+                </li>
 
-                <span
-                  aria-hidden="true"
-                  className="hidden h-1 w-1 rounded-full bg-[#8cc129]/60 md:mx-4 md:inline-block"
-                />
-
-                <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white/90 sm:text-base">
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#8cc129]/35 bg-[#8cc129]/15 text-[#8cc129]">
+                <li className="inline-flex items-center justify-center gap-2.5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold tracking-wide text-white/95 backdrop-blur-sm transition-colors duration-300 hover:border-[#8cc129]/40 hover:bg-[#8cc129]/10 sm:text-base">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#8cc129]/35 bg-[#8cc129]/15 text-[#8cc129]">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -597,15 +617,10 @@ export default function BuyerAndSellerProtection() {
                     </svg>
                   </span>
                   Trade smart
-                </span>
+                </li>
 
-                <span
-                  aria-hidden="true"
-                  className="hidden h-1 w-1 rounded-full bg-[#8cc129]/60 md:mx-4 md:inline-block"
-                />
-
-                <span className="inline-flex items-center gap-2 rounded-full border border-[#8cc129]/40 bg-[#8cc129]/15 px-3.5 py-1.5 text-sm font-bold tracking-wide text-[#8cc129] sm:px-4 sm:py-2 sm:text-base">
-                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#8cc129]/25">
+                <li className="inline-flex items-center justify-center gap-2.5 rounded-2xl border border-[#8cc129]/45 bg-[#8cc129]/18 px-4 py-3 text-sm font-bold tracking-wide text-[#c4e86a] shadow-[0_0_24px_-6px_rgba(140,193,41,0.45)] transition-colors duration-300 hover:border-[#8cc129]/70 hover:bg-[#8cc129]/25 sm:px-5 sm:text-base">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#8cc129]/30 text-[#8cc129]">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -621,8 +636,8 @@ export default function BuyerAndSellerProtection() {
                     </svg>
                   </span>
                   Trade with GolfSwipe Escrow
-                </span>
-              </p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
