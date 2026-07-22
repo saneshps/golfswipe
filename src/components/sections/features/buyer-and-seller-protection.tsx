@@ -440,20 +440,25 @@ export default function BuyerAndSellerProtection() {
       </section>
 
       {/* No More… */}
-      <section className="relative w-full overflow-hidden bg-white">
+      <section className="relative w-full overflow-x-hidden bg-[#03372b]">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(140,193,41,0.1),transparent_55%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(140,193,41,0.18),transparent_50%),radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.04),transparent_45%)]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/30 to-transparent"
+          className="pointer-events-none absolute -left-16 top-1/3 h-72 w-72 rounded-full bg-[#8cc129]/15 blur-[110px]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
         <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-24 xl:w-[90%] 2xl:w-[85%]">
-          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
             <div>
               <SectionHeading
+                onDark
                 icon={
                   <svg
                     viewBox="0 0 24 24"
@@ -472,40 +477,43 @@ export default function BuyerAndSellerProtection() {
                 }
               >
                 No More{" "}
-                <span className="bg-linear-to-r from-[#8cc129] to-[#5a8f0f] bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-[#8cc129] to-[#c4e86a] bg-clip-text text-transparent">
                   …
                 </span>
               </SectionHeading>
 
-              <p className="mt-3 max-w-md text-base leading-relaxed text-[#03372b]/65 sm:mt-4 sm:text-lg">
+              <p className="mt-4 max-w-md text-base leading-relaxed text-white/75 sm:mt-5 sm:text-lg">
                 Leave the risky, messy side of peer-to-peer trading behind.
-              </p>
+              </p> 
             </div>
 
-            <ul className="space-y-3 sm:space-y-4">
+            <ul className="space-y-3 sm:space-y-3.5">
               {noMoreItems.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 rounded-2xl border border-[#03372b]/8 bg-light-gray px-4 py-3.5 sm:gap-4 sm:px-5 sm:py-4"
-                >
-                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#03372b]/8 text-[#03372b]">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-3.5 w-3.5"
-                      aria-hidden="true"
-                    >
-                      <path d="M18 6L6 18" />
-                      <path d="M6 6l12 12" />
-                    </svg>
-                  </span>
-                  <span className="text-sm leading-relaxed text-[#03372b]/75 sm:text-base">
-                    {item}
-                  </span>
+                <li key={item} className="group relative">
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -inset-0.5 rounded-[18px] bg-[#8cc129]/0 opacity-0 blur-lg transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-[#8cc129]/35 group-hover:opacity-100"
+                  />
+                  <div className="relative flex items-start gap-3.5 rounded-2xl border border-[#8cc129]/20 bg-[#f3f7eb] px-4 py-3.5 shadow-[0_12px_32px_-14px_rgba(0,0,0,0.4)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-x-1 group-hover:border-[#8cc129]/50 group-hover:bg-[#f7faef] group-hover:shadow-[0_18px_40px_-14px_rgba(0,0,0,0.5)] sm:gap-4 sm:px-5 sm:py-4">
+                    <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#03372b]/10 bg-white text-[#03372b] shadow-sm transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-hover:border-[#8cc129]/40 group-hover:bg-[#8cc129] group-hover:text-[#03372b]">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.25"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-3.5 w-3.5"
+                        aria-hidden="true"
+                      >
+                        <path d="M18 6L6 18" />
+                        <path d="M6 6l12 12" />
+                      </svg>
+                    </span>
+                    <span className="min-w-0 flex-1 pt-0.5 text-sm leading-relaxed text-[#03372b]/90 sm:text-base">
+                      {item}
+                    </span>
+                  </div>
                 </li>
               ))}
             </ul>
