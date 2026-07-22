@@ -22,8 +22,9 @@ export default function GpsCourseMapsShotPlanner() {
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
-        <div className="relative mx-auto flex justify-center px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
-          <div className="relative z-10 mx-auto w-full max-w-3xl text-center">
+        <div className="relative mx-auto flex px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
+          <div className="grid grid-cols-1 items-center gap-12 lg:gap-14 xl:gap-20">
+            <div className="relative z-10 mx-auto w-full max-w-3xl">
             <span className="mb-4 inline-flex items-center rounded-full border border-[#03372b]/15 bg-[#03372b]/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-[#03372b] sm:mb-6 sm:text-sm">
               GPS Course Maps &amp; Shot Planner
             </span>
@@ -40,6 +41,11 @@ export default function GpsCourseMapsShotPlanner() {
               High-resolution GPS maps and tactical shot planning for global
               courses.
             </p>
+             </div>
+          </div>
+          
+          <div className="grid grid-cols-1 items-center gap-12 lg:gap-14 xl:gap-20">
+            <img src="/asset/img/course.webp" alt="GPS Course Maps & Shot Planner" />
           </div>
         </div>
       </section>
