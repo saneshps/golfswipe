@@ -15,7 +15,7 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Marketplace", href: "/marketplace" },
-  { label: "Buyer and Seller Protection", href: "/buyer-and-seller-protection" },
+  { label: "GolfSwipe Secure Escrow", href: "/golfSwipe-secure-escrow" },
   { label: "Pricing", href: "/pricing" },
   {
     label: "Features",

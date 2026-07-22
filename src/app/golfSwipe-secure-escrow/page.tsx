@@ -1,6 +1,6 @@
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import BuyerAndSellerProtection from "@/components/sections/buyer-and-seller-protection/buyer-and-seller-protection";
+import BuyerAndSellerProtection from "@/components/sections/golfSwipe-secure-escrow/golfSwipe-secure-escrow";
 import TitleBanner from "@/components/ui/titleBanner";
 
 export default function BuyerAndSellerProtectionPage() {
@@ -8,10 +8,10 @@ export default function BuyerAndSellerProtectionPage() {
     <div>
       <Header />
       <main className="flex flex-1 flex-col">  
-      <TitleBanner title="Buyer and Seller Protection"
+      <TitleBanner title="GolfSwipe Secure Escrow"
           breadcrumbs={[
             { label: "Home", href: "/" },
-            { label: "Buyer and Seller Protection" },
+            { label: "GolfSwipe Secure Escrow" },
           ]}
         />
         <BuyerAndSellerProtection />
