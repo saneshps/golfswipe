@@ -20,7 +20,7 @@ function CheckIcon({ className }: { className?: string }) {
 const audiences = [
   {
     label: "For Clubs & Employers",
-    badge: "Simple Pricing",
+    // badge: "Simple Pricing",
     price: "£7.50",
     period: "/ week",
     description:
@@ -34,8 +34,8 @@ const audiences = [
   },
   {
     label: "For Job Seekers",
-    badge: "Free to Use",
-    price: "Free",
+    // badge: "Free to Use",
+    // price: "Free",
     period: "",
     description:
       "Browse highly targeted industry roles globally and apply directly to decision-makers with a single tap.",
@@ -143,8 +143,10 @@ export default function GolfJobsBoard() {
 
             </div>
           </div>
+
+          
           <div className="relative z-10 mx-auto mt-12 w-full max-w-4xl sm:mt-16 lg:mt-20">
-          <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-2">
                 {audiences.map((audience) => {
                   const isFeatured = audience.featured;
 
@@ -172,9 +174,7 @@ export default function GolfJobsBoard() {
                       )}
 
                       <div className="relative flex flex-col p-6 sm:p-7">
-                        <span className="mb-4 inline-flex w-fit items-center rounded-full border border-[#8cc129]/40 bg-[#8cc129]/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-[#8cc129] sm:mb-5 sm:text-xs">
-                          {audience.badge}
-                        </span>
+                     
 
                         <h3 className="text-lg font-semibold tracking-tight text-white sm:text-xl">
                           {audience.label}
