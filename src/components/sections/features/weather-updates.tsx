@@ -5,10 +5,6 @@ const weatherImages = [
     src: "/asset/img/weather-1.webp",
     alt: "GolfSwipe app — live golf weather conditions and playability rating",
   },
-  {
-    src: "/asset/img/weather-2.webp",
-    alt: "GolfSwipe app — hourly forecast and rain timing for your course",
-  },
 ];
 
 const benefits = [
@@ -202,20 +198,39 @@ export default function WeatherUpdates() {
             {weatherImages.map((image) => (
               <figure
                 key={image.src}
-                className="group relative z-10 overflow-hidden rounded-[20px] border border-[#03372b]/8 bg-white shadow-[0_12px_40px_-16px_rgba(3,55,43,0.18)]"
+                className="relative z-10 mx-auto w-full max-w-3xl md:col-span-2 md:max-w-4xl lg:max-w-5xl"
               >
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 z-10 bg-linear-to-t from-[#03372b]/20 via-transparent to-transparent"
+                  className="absolute inset-3 rounded-[1.75rem] bg-[#8cc129]/20 blur-3xl sm:inset-5 sm:rounded-4xl"
                 />
-                <div className="relative aspect-video w-full">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                    sizes="(max-width: 768px) 90vw, 42vw"
-                  />
+                <div
+                  aria-hidden="true"
+                  className="absolute -inset-2 rounded-[1.75rem] border border-[#03372b]/10 sm:-inset-3 sm:rounded-[2.25rem]"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -bottom-4 -left-3 h-16 w-16 rounded-full bg-[#8cc129]/30 blur-2xl sm:-bottom-6 sm:-left-5 sm:h-24 sm:w-24"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -right-3 -top-3 h-14 w-14 rounded-full bg-[#c4e86a]/25 blur-2xl sm:-right-5 sm:-top-5 sm:h-20 sm:w-20"
+                />
+
+                <div className="group relative overflow-hidden rounded-2xl border border-[#03372b]/10 bg-[#03372b]/3 shadow-[0_20px_50px_-16px_rgba(3,55,43,0.22)] sm:rounded-3xl">
+                  <div className="relative aspect-16/10 w-full sm:aspect-video">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover object-[center_20%] transition-transform duration-700 ease-out group-hover:scale-[1.02] sm:object-center"
+                      sizes="(max-width: 640px) 92vw, (max-width: 1024px) 80vw, 64rem"
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#03372b]/25 via-transparent to-transparent"
+                    />
+                  </div>
                 </div>
               </figure>
             ))}
