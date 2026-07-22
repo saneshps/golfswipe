@@ -1,6 +1,6 @@
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import BuyerAndSellerProtection from "@/components/sections/golfSwipe-secure-escrow/golfSwipe-secure-escrow";
+import GolfSwipeSecureEscrow from "@/components/sections/golfSwipe-secure-escrow/golfSwipe-secure-escrow";
 import TitleBanner from "@/components/ui/titleBanner";
 
 export default function BuyerAndSellerProtectionPage() {
@@ -14,7 +14,7 @@ export default function BuyerAndSellerProtectionPage() {
             { label: "GolfSwipe Secure Escrow" },
           ]}
         />
-        <BuyerAndSellerProtection />
+        <GolfSwipeSecureEscrow />
       </main>
       <Footer />
     </div>
