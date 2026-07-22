@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 
 export default function GpsCourseMapsShotPlanner() {
   return (
@@ -22,9 +23,8 @@ export default function GpsCourseMapsShotPlanner() {
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
         />
 
-        <div className="relative mx-auto flex px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
-          <div className="grid grid-cols-1 items-center gap-12 lg:gap-14 xl:gap-20">
-            <div className="relative z-10 mx-auto w-full max-w-3xl">
+        <div className="relative mx-auto px-4 py-16 sm:px-6 sm:py-20 md:w-[90%] lg:w-[90%] lg:px-8 lg:py-28 xl:w-[90%] 2xl:w-[85%]">
+          <div className="relative z-10 mx-auto w-full max-w-3xl text-center">
             <span className="mb-4 inline-flex items-center rounded-full border border-[#03372b]/15 bg-[#03372b]/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-[#03372b] sm:mb-6 sm:text-sm">
               GPS Course Maps &amp; Shot Planner
             </span>
@@ -41,12 +41,46 @@ export default function GpsCourseMapsShotPlanner() {
               High-resolution GPS maps and tactical shot planning for global
               courses.
             </p>
-             </div>
           </div>
-          
-          <div className="grid grid-cols-1 items-center gap-12 lg:gap-14 xl:gap-20">
-            <img src="/asset/img/course.webp" alt="GPS Course Maps & Shot Planner" />
-          </div>
+
+          <figure className="relative z-10 mx-auto mt-10 w-full max-w-4xl sm:mt-12 lg:mt-16 lg:max-w-5xl">
+            <div
+              aria-hidden="true"
+              className="absolute inset-3 rounded-[1.75rem] bg-[#8cc129]/20 blur-3xl sm:inset-5 sm:rounded-4xl"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute -inset-2 rounded-[1.75rem] border border-[#03372b]/10 sm:-inset-3 sm:rounded-[2.25rem]"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute -bottom-4 -left-3 h-16 w-16 rounded-full bg-[#8cc129]/30 blur-2xl sm:-bottom-6 sm:-left-5 sm:h-24 sm:w-24"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute -right-3 -top-3 h-14 w-14 rounded-full bg-[#c4e86a]/25 blur-2xl sm:-right-5 sm:-top-5 sm:h-20 sm:w-20"
+            />
+
+            <div className="group relative overflow-hidden rounded-2xl border border-[#03372b]/10 bg-[#03372b]/3 shadow-[0_20px_50px_-16px_rgba(3,55,43,0.22)] sm:rounded-3xl lg:rounded-4xl">
+              <div className="relative aspect-16/10 w-full sm:aspect-video">
+                <Image
+                  src="/asset/img/course.webp"
+                  alt="GPS Course Maps & Shot Planner"
+                  fill
+                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  sizes="(max-width: 640px) 92vw, (max-width: 1024px) 85vw, 64rem"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#03372b]/30 via-transparent to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-60"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10"
+                />
+              </div>
+            </div>
+          </figure>
         </div>
       </section>
 
