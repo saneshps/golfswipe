@@ -1,10 +1,10 @@
 const listingTiers = [
   { range: "£1 – £10", fee: "50p", period: "/ week" },
-  { range: "£10 – £100", fee: "£1.00", period: "/ week" },
-  { range: "£100 – £300", fee: "£1.50", period: "/ week" },
+  { range: "£11 – £100", fee: "£1.00", period: "/ week" },
+  { range: "£101 – £300", fee: "£1.50", period: "/ week" },
   { range: "£301 – £600", fee: "£2.00", period: "/ week" },
   { range: "£601 – £1,000", fee: "£3.00", period: "/ week" },
-  { range: "£1,000+", fee: "£5.00", period: "/ week" },
+  { range: "£1,001+", fee: "£5.00", period: "/ week" },
 ];
 
 export default function MarketplacePricing() {

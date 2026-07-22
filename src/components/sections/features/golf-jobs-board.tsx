@@ -1,42 +1,50 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
 
-function Highlight({ children }: { children: ReactNode }) {
+function CheckIcon({ className }: { className?: string }) {
   return (
-    <mark className="rounded-sm bg-white/25 px-0.5 font-semibold text-[#03372b] [box-decoration-break:clone]">
-      {children}
-    </mark>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
   );
 }
 
 const audiences = [
   {
     label: "For Clubs & Employers",
-    description: (
-      <>
-        Post open roles—from greenkeepers and pro shop assistants to caddies and
-        clubhouse managers—for just{" "}
-        <Highlight>£7.50/week</Highlight>.{" "}
-        <Highlight>
-          We don&apos;t collect CVs or store applicant data
-        </Highlight>
-        , meaning{" "}
-        <Highlight>zero GDPR or privacy liabilities</Highlight> for your
-        business.{" "}
-        <Highlight>Candidates apply to you directly</Highlight>.
-      </>
-    ),
+    badge: "Simple Pricing",
+    price: "£7.50",
+    period: "/ week",
+    description:
+      "Post open roles—from greenkeepers and pro shop assistants to caddies and clubhouse managers.",
+    features: [
+      "We don't collect CVs or store applicant data",
+      "Zero GDPR or privacy liabilities",
+      "Candidates apply to you directly",
+    ],
+    featured: true,
   },
   {
     label: "For Job Seekers",
-    description: (
-      <>
-        Browse{" "}
-        <Highlight>highly targeted industry roles globally</Highlight> and{" "}
-        <Highlight>apply directly to decision-makers</Highlight> with a{" "}
-        <Highlight>single tap</Highlight>.
-      </>
-    ),
+    badge: "Free to Use",
+    price: "Free",
+    period: "",
+    description:
+      "Browse highly targeted industry roles globally and apply directly to decision-makers with a single tap.",
+    features: [
+      "Highly targeted industry roles globally",
+      "Apply directly to decision-makers",
+      "Apply with a single tap",
+    ],
+    featured: false,
   },
 ];
 
@@ -131,22 +139,100 @@ export default function GolfJobsBoard() {
                 live and breathe golf culture.
               </p>
 
-              <div className="mt-8 space-y-6 sm:mt-10 sm:space-y-8">
-                {audiences.map((audience) => (
-                  <div
-                    key={audience.label}
-                    className="relative border-l-2 border-[#8cc129] pl-4 sm:pl-5"
-                  >
-                    <h3 className="text-base font-bold tracking-tight text-[#03372b] sm:text-lg">
-                      {audience.label}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-[#000000]/70 sm:text-base">
-                      {audience.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+             
+
             </div>
+          </div>
+          <div className="relative z-10 mx-auto mt-12 w-full max-w-4xl sm:mt-16 lg:mt-20">
+          <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-2">
+                {audiences.map((audience) => {
+                  const isFeatured = audience.featured;
+
+                  return (
+                    <div
+                      key={audience.label}
+                      className={[
+                        "relative overflow-hidden rounded-2xl sm:rounded-3xl",
+                        isFeatured
+                          ? "border border-[#8cc129]/50 bg-linear-to-b from-[#03372b] to-[#054e3d] shadow-[0_24px_60px_-20px_rgba(3,55,43,0.55)] ring-1 ring-[#8cc129]/30"
+                          : "border border-[#03372b]/20 bg-[#03372b] shadow-[0_20px_50px_-24px_rgba(3,55,43,0.45)]",
+                      ].join(" ")}
+                    >
+                      {isFeatured && (
+                        <>
+                          <div
+                            aria-hidden="true"
+                            className="pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[#8cc129]/25 blur-3xl"
+                          />
+                          <div
+                            aria-hidden="true"
+                            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#8cc129]/70 to-transparent"
+                          />
+                        </>
+                      )}
+
+                      <div className="relative flex flex-col p-6 sm:p-7">
+                        <span className="mb-4 inline-flex w-fit items-center rounded-full border border-[#8cc129]/40 bg-[#8cc129]/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-[#8cc129] sm:mb-5 sm:text-xs">
+                          {audience.badge}
+                        </span>
+
+                        <h3 className="text-lg font-semibold tracking-tight text-white sm:text-xl">
+                          {audience.label}
+                        </h3>
+
+                        <div className="mt-4 flex items-baseline gap-1.5">
+                          <span
+                            className={[
+                              "text-4xl font-bold tracking-tight sm:text-[2.5rem]",
+                              isFeatured ? "text-[#8cc129]" : "text-white",
+                            ].join(" ")}
+                          >
+                            {audience.price}
+                          </span>
+                          {audience.period ? (
+                            <span className="text-sm text-white/55 sm:text-base">
+                              {audience.period}
+                            </span>
+                          ) : null}
+                        </div>
+
+                        <p className="mt-4 text-sm leading-relaxed text-white/70 sm:text-[15px]">
+                          {audience.description}
+                        </p>
+
+                        <div
+                          className={[
+                            "my-5 h-px w-full sm:my-6",
+                            isFeatured
+                              ? "bg-linear-to-r from-transparent via-[#8cc129]/40 to-transparent"
+                              : "bg-white/10",
+                          ].join(" ")}
+                        />
+
+                        <ul className="flex flex-col gap-3">
+                          {audience.features.map((feature) => (
+                            <li key={feature} className="flex gap-3">
+                              <span
+                                className={[
+                                  "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full",
+                                  isFeatured
+                                    ? "bg-[#8cc129]/20 text-[#8cc129]"
+                                    : "bg-white/10 text-[#8cc129]",
+                                ].join(" ")}
+                              >
+                                <CheckIcon className="h-3 w-3" />
+                              </span>
+                              <span className="text-sm leading-relaxed text-white/75 sm:text-[15px]">
+                                {feature}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
           </div>
 
           {/* Closing banner */}
