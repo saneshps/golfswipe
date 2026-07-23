@@ -89,6 +89,7 @@ try {
   $safePhone = escape_html($phone);
   $safeSubject = escape_html($subject);
   $safeMessage = nl2br(escape_html($message));
+  $replyMailto = 'mailto:' . $safeEmail . '?subject=' . rawurlencode('Re: ' . $subject);
   $year = date('Y');
 
   $detailRow = static function (string $label, string $valueHtml, bool $isLast = false): string {
@@ -178,7 +179,20 @@ try {
             </td>
           </tr>
           <tr>
-            <td align="center" style="padding: 0 36px 32px; background-color: #ffffff;">
+            <td align="center" style="padding: 0 36px 8px; background-color: #ffffff;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                <tr>
+                  <td align="center" bgcolor="#03372b" style="border-radius: 10px; background-color: #03372b;">
+                    <a href="{$replyMailto}" style="display: inline-block; padding: 14px 28px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; text-decoration: none; border-radius: 10px;">
+                      Reply to {$safeName}
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding: 28px 36px 32px; background-color: #ffffff;">
               <p style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 1.6; color: #6b857a; text-align: center;">
                 Sent automatically from the GolfSwipe contact form.<br>You can reply directly to this email.
               </p>
