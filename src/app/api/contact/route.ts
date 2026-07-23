@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "saneshbigleap@gmail.com";
-const CC_EMAIL = process.env.CONTACT_CC_EMAIL ?? "pssanesh09@gmail.com";
+const CC_EMAIL = process.env.CONTACT_CC_EMAIL ?? "dibin.giraf@gmail.com";
 const SITE_URL = (
   process.env.SITE_URL ??
   process.env.NEXT_PUBLIC_SITE_URL ??
