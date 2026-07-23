@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import type { FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 
 const inputClass =
   "w-full rounded-xl border border-[#03372b]/12 bg-white px-4 py-3 text-base text-[#03372b] shadow-sm outline-none transition-all duration-200 placeholder:text-zinc-400 focus:border-[#8cc129] focus:ring-2 focus:ring-[#8cc129]/25";
@@ -12,10 +12,47 @@ const labelClass =
 
 export default function Form() {
   const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    router.push("/thank-you");
+    setError(null);
+    setIsSubmitting(true);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.get("fullName"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          subject: formData.get("subject"),
+          message: formData.get("message"),
+        }),
+      });
+
+      const data = (await response.json().catch(() => null)) as {
+        error?: string;
+      } | null;
+
+      if (!response.ok) {
+        throw new Error(data?.error ?? "Failed to send message.");
+      }
+
+      router.push("/thank-you");
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again.",
+      );
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -54,8 +91,6 @@ export default function Form() {
           {/* Left — form */}
           <div className="relative z-10 lg:col-span-3">
             <form
-              action="/thank-you"
-              method="post"
               onSubmit={handleSubmit}
               className="rounded-3xl border border-[#03372b]/10 bg-white/80 p-6 shadow-[0_20px_50px_-20px_rgba(3,55,43,0.18)] backdrop-blur-sm sm:p-8 lg:p-10"
             >
@@ -149,26 +184,38 @@ export default function Form() {
                 </div>
               </div>
 
+              {error ? (
+                <p
+                  role="alert"
+                  className="mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+                >
+                  {error}
+                </p>
+              ) : null}
+
               <div className="mt-7 sm:mt-8">
                 <button
                   type="submit"
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#03372b] px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#054e3d] hover:shadow-lg hover:shadow-[#03372b]/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8cc129] focus-visible:ring-offset-2 sm:w-auto sm:min-w-48"
+                  disabled={isSubmitting}
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#03372b] px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#054e3d] hover:shadow-lg hover:shadow-[#03372b]/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8cc129] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto sm:min-w-48"
                 >
-                  Send message
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
+                  {isSubmitting ? "Sending..." : "Send message"}
+                  {!isSubmitting ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  ) : null}
                 </button>
               </div>
             </form>
