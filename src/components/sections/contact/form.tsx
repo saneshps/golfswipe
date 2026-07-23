@@ -23,8 +23,15 @@ export default function Form() {
     const form = event.currentTarget;
     const formData = new FormData(form);
 
+    // Static export (live Hostinger) cannot run Next.js API routes.
+    // Production builds post to PHP; local `next dev` uses the Node route.
+    const endpoint =
+      process.env.NODE_ENV === "production"
+        ? "/api/contact.php"
+        : "/api/contact";
+
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
