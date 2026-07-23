@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "saneshbigleap@gmail.com";
+const CC_EMAIL = process.env.CONTACT_CC_EMAIL ?? "pssanesh09@gmail.com";
 
 type ContactBody = {
   fullName?: string;
@@ -244,6 +245,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: `"GolfSwipe Contact" <${smtpUser}>`,
       to: TO_EMAIL,
+      cc: CC_EMAIL,
       replyTo: email,
       subject: `GolfSwipe Contact: ${subject}`,
       text,
